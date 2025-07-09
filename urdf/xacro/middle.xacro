@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="middle" params="name mirror mirror_mesh *origin">
+        <!-- middle  -->
+        <link name="${name}_middle_metacarpals">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/middle_metacarpals.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/middle_metacarpals.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="metacarpals"/>
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${middle_metacarpals_com_x} ${middle_metacarpals_com_y*mirror} ${middle_metacarpals_com_z}" />
+                <mass value="${middle_metacarpals_mass}" />
+                <inertia
+                    ixx="${middle_metacarpals_ixx}" ixy="${middle_metacarpals_ixy*mirror}"
+                    ixz="${middle_metacarpals_ixz}"
+                    iyy="${middle_metacarpals_iyy}" iyz="${middle_metacarpals_iyz*mirror}" 
+                    izz="${middle_metacarpals_izz}" />
+            </inertial>
+        </link>
+
+        <joint name="${name}_middle_abad_joint" type="revolute">
+            <origin xyz="${middle_abad_x} ${middle_abad_y*mirror} ${middle_abad_z}" rpy="0 0 0" />
+            <parent link="${name}_hand_base_link" />
+            <child link="${name}_middle_metacarpals" />
+            <axis xyz="1 0 0" />
+
+            <xacro:if value="${mirror_mesh == True}">
+                <limit effort="${middle_abad_torque_max}" velocity="${middle_abad_velocity_max}"
+                    lower="${middle_abad_position_max*mirror}"
+                    upper="${middle_abad_position_min*mirror}" />
+            </xacro:if>
+            <xacro:if value="${mirror_mesh == False}">
+                <limit effort="${middle_abad_torque_max}" velocity="${middle_abad_velocity_max}"
+                    lower="${middle_abad_position_min}" upper="${middle_abad_position_max}" />
+            </xacro:if>
+        </joint>
+
+        <link name="${name}_middle_proximal">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/middle_proximal.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/middle_proximal.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${middle_proximal_com_x} ${middle_proximal_com_y} ${middle_proximal_com_z}" />
+                <mass value="${middle_proximal_mass}" />
+                <inertia
+                    ixx="${middle_proximal_ixx}" ixy="${middle_proximal_ixy}" ixz="${middle_proximal_ixz}"
+                    iyy="${middle_proximal_iyy}" iyz="${middle_proximal_iyz}" izz="${middle_proximal_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${middle_proximal_collision_z}" />
+                <geometry>
+                    <cylinder radius="${middle_proximal_collision_r}" length="${middle_proximal_collision_l}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_middle_mcp_joint" type="revolute">
+            <origin xyz="${middle_mcp_x} 0 ${middle_mcp_z}" rpy="0 0 0" />
+            <parent link="${name}_middle_metacarpals" />
+            <child link="${name}_middle_proximal" />
+            <axis xyz="0 1 0" />
+            <limit effort="${middle_mcp_torque_max}" velocity="${middle_mcp_velocity_max}"
+                lower="${middle_mcp_position_min}" upper="${middle_mcp_position_max}" />
+        </joint>
+
+        <link name="${name}_middle_middle">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/middle_middle.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/middle_middle.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${middle_middle_com_x} ${middle_middle_com_y} ${middle_middle_com_z}" />
+                <mass value="${middle_middle_mass}" />
+                <inertia
+                    ixx="${middle_middle_ixx}" ixy="${middle_middle_ixy}" ixz="${middle_middle_ixz}"
+                    iyy="${middle_middle_iyy}" iyz="${middle_middle_iyz}" izz="${middle_middle_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${middle_middle_collision_z}" />
+                <geometry>
+                    <cylinder radius="${middle_middle_collision_r}" length="${middle_middle_collision_l}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_middle_pip_joint" type="revolute">
+            <origin xyz="${middle_pip_x} ${middle_pip_y} ${middle_pip_z}" rpy="0 0 0" />
+            <parent link="${name}_middle_proximal" />
+            <child link="${name}_middle_middle" />
+            <axis xyz="0 1 0" />
+            <limit effort="${middle_pip_torque_max}" velocity="${middle_pip_velocity_max}"
+                lower="${middle_pip_position_min}" upper="${middle_pip_position_max}" />
+        </joint>
+
+        <link name="${name}_middle_distal">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/middle_distal.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/middle_distal.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${middle_distal_com_x} ${middle_distal_com_y} ${middle_distal_com_z}" />
+                <mass value="${middle_distal_mass}" />
+                <inertia
+                    ixx="${middle_distal_ixx}" ixy="${middle_distal_ixy}"
+                    ixz="${middle_distal_ixz}"
+                    iyy="${middle_distal_iyy}" iyz="${middle_distal_iyz}"
+                    izz="${middle_distal_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${middle_distal_collision_z}" />
+                <geometry>
+                    <cylinder radius="${middle_distal_collision_r}" length="${middle_distal_collision_l}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_middle_dip_joint" type="revolute">
+            <origin xyz=" ${middle_dip_x}  ${middle_dip_y} ${middle_dip_z}" rpy="0 0 0" />
+            <parent link="${name}_middle_middle" />
+            <child link="${name}_middle_distal" />
+            <axis xyz="0 1 0" />
+            <limit effort="${middle_dip_torque_max}" velocity="${middle_dip_velocity_max}"
+                lower="${middle_dip_position_min}" upper="${middle_dip_position_max}" />
+            <!-- <mimic
+                joint="$middle_pip_joint"
+                multiplier="${middle_dip_multiplier}"
+                offset="0" /> -->
+        </joint>
+
+        <link name="${name}_middle_distal_vertices_virtual_coordinates">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/middle_distal_vertices_virtual_coordinates.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/middle_distal_vertices_virtual_coordinates.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="tips"/>
+            </visual>
+        </link>
+
+        <joint name="${name}_middle_tip" type="fixed">
+            <origin xyz="${middle_tips_x} 0 ${middle_tips_z}" rpy="0 0 0" />
+            <parent link="${name}_middle_distal" />
+            <child link="${name}_middle_distal_vertices_virtual_coordinates" />
+        </joint>
+
+    </xacro:macro>
+</robot>
