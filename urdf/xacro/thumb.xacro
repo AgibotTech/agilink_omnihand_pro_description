@@ -69,14 +69,6 @@
                     iyy="${thumb_metacarpals_base2_iyy}" iyz="${thumb_metacarpals_base2_iyz*mirror}" 
                     izz="${thumb_metacarpals_base2_izz}" />
             </inertial>
-            <collision>
-                <origin rpy="0 0 0"
-                    xyz="${thumb_metacarpals_base2_collision_box_x} ${thumb_metacarpals_base2_collision_box_y*mirror} ${thumb_metacarpals_base2_collision_box_z}" />
-                <geometry>
-                    <box
-                        size="${thumb_metacarpals_base2_collision_box_l} ${thumb_metacarpals_base2_collision_box_w} ${thumb_metacarpals_base2_collision_box_h}" />
-                </geometry>
-            </collision>            
         </link>
 
         <joint name="${name}_thumb_abad_joint" type="revolute">
@@ -161,10 +153,11 @@
                     iyy="${thumb_proximal_iyy}" iyz="${thumb_proximal_iyz*mirror}" izz="${thumb_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 ${thumb_proximal_collision_cylinder_rotp*mirror} 0"
-                    xyz="${thumb_proximal_collision_cylinder_x} ${thumb_proximal_collision_cylinder_y*mirror} ${thumb_proximal_collision_cylinder_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${thumb_proximal_collision_box_x} ${thumb_proximal_collision_box_y*mirror} ${thumb_proximal_collision_box_z}" />
                 <geometry>
-                    <cylinder radius="${thumb_proximal_collision_cylinder_r}" length="${thumb_proximal_collision_cylinder_l}" />
+                    <box
+                        size="${thumb_proximal_collision_box_l} ${thumb_proximal_collision_box_w} ${thumb_proximal_collision_box_h}" />
                 </geometry>
             </collision>
         </link>
@@ -219,10 +212,10 @@
 
             <limit effort="${thumb_dip_torque_max}" velocity="${thumb_dip_velocity_max}"
                 lower="${thumb_dip_position_min}" upper="${thumb_dip_position_max}" />
-            <!-- <mimic
-                joint="$thumb_pip_joint"
+            <mimic
+                joint="${name}_thumb_pip_joint"
                 multiplier="${thumb_dip_multiplier}"
-                offset="0" /> -->
+                offset="0" />
         </joint>
 
         <link name="${name}_thumb_distal_vertices_virtual_coordinates">

@@ -27,7 +27,7 @@
                     iyy="${pinky_proximal_iyy}" iyz="${pinky_proximal_iyz}" izz="${pinky_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${pinky_proximal_collision_x} ${pinky_proximal_collision_y} ${pinky_proximal_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${pinky_proximal_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_proximal_collision_r}" length="${pinky_proximal_collision_l}" />
                 </geometry>
@@ -65,7 +65,7 @@
                     iyy="${pinky_middle_iyy}" iyz="${pinky_middle_iyz}" izz="${pinky_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${pinky_middle_collision_x} ${pinky_middle_collision_y} ${pinky_middle_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${pinky_middle_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_middle_collision_r}" length="${pinky_middle_collision_l}" />
                 </geometry>
@@ -79,6 +79,10 @@
             <axis xyz="0 1 0" />
             <limit effort="${pinky_pip_torque_max}" velocity="${pinky_pip_velocity_max}"
                 lower="${pinky_pip_position_min}" upper="${pinky_pip_position_max}" />
+            <mimic
+                joint="${name}_pinky_mcp_joint"
+                multiplier="${pinky_pip_multiplier}"
+                offset="0" />
         </joint>
 
         <link name="${name}_pinky_distal">
@@ -105,7 +109,7 @@
                     izz="${pinky_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${pinky_distal_collision_x} ${pinky_distal_collision_y} ${pinky_distal_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${pinky_distal_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_distal_collision_r}" length="${pinky_distal_collision_l}" />
                 </geometry>
@@ -119,10 +123,10 @@
             <axis xyz="0 1 0" />
             <limit effort="${pinky_dip_torque_max}" velocity="${pinky_dip_velocity_max}"
                 lower="${pinky_dip_position_min}" upper="${pinky_dip_position_max}" />
-            <!-- <mimic
-                joint="$pinky_pip_joint"
+            <mimic
+                joint="${name}_pinky_mcp_joint"
                 multiplier="${pinky_dip_multiplier}"
-                offset="0" /> -->
+                offset="0" />
         </joint>
 
         <link name="${name}_pinky_distal_vertices_virtual_coordinates">

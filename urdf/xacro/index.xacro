@@ -68,7 +68,7 @@
                     iyy="${index_proximal_iyy}" iyz="${index_proximal_iyz}" izz="${index_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_proximal_collision_x} ${index_proximal_collision_y} ${index_proximal_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${index_proximal_collision_z}" />
                 <geometry>
                     <cylinder radius="${index_proximal_collision_r}" length="${index_proximal_collision_l}" />
                 </geometry>
@@ -106,7 +106,7 @@
                     iyy="${index_middle_iyy}" iyz="${index_middle_iyz}" izz="${index_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_middle_collision_x} ${index_middle_collision_y} ${index_middle_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${index_middle_collision_z}" />
                 <geometry>
                     <cylinder radius="${index_middle_collision_r}" length="${index_middle_collision_l}" />
                 </geometry>
@@ -146,7 +146,7 @@
                     izz="${index_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_distal_collision_x} ${index_distal_collision_y} ${index_distal_collision_z}" />
+                <origin rpy="0 0 0" xyz="0 0 ${index_distal_collision_z}" />
                 <geometry>
                     <cylinder radius="${index_distal_collision_r}" length="${index_distal_collision_l}" />
                 </geometry>
@@ -160,10 +160,10 @@
             <axis xyz="0 1 0" />
             <limit effort="${index_dip_torque_max}" velocity="${index_dip_velocity_max}"
                 lower="${index_dip_position_min}" upper="${index_dip_position_max}" />
-            <!-- <mimic
-                joint="$index_pip_joint"
+            <mimic
+                joint="${name}_index_pip_joint"
                 multiplier="${index_dip_multiplier}"
-                offset="0" /> -->
+                offset="0" />
         </joint>
 
         <link name="${name}_index_distal_vertices_virtual_coordinates">
