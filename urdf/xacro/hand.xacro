@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <xacro:include filename="$(find o12_description)/urdf/xacro/const.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/material.xacro" />
+    <xacro:property name="mesh_path" value="package://o12_description/meshes" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/thumb.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/index.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/middle.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/ring.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/pinky.xacro" />
+    
+
+    <xacro:macro name="hand" params="name mirror mirror_mesh *origin">
+
+        <link name="${name}_hand_base_link">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/hand_base_link.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/hand_base_link.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0" xyz="${hand_base_link_com_x} ${hand_base_link_com_y*mirror} ${hand_base_link_com_z}" />
+                <mass value="${hand_base_link_mass}" />
+                <inertia
+                    ixx="${hand_base_link_ixx}" ixy="${hand_base_link_ixy*mirror}" ixz="${hand_base_link_ixz}"
+                    iyy="${hand_base_link_iyy}" iyz="${hand_base_link_iyz*mirror}" izz="${hand_base_link_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${palm_collision_cylinder_z}" />
+                <geometry>
+                    <cylinder radius="${palm_collision_cylinder_r}"
+                        length="${palm_collision_cylinder_l}" />
+                </geometry>
+            </collision>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${palm_collision_box_z}" />
+                <geometry>
+                    <box
+                        size="${palm_collision_box_l} ${palm_collision_box_w} ${palm_collision_box_h}" />
+                </geometry>
+            </collision>
+
+        </link>
+
+        <xacro:thumb name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </xacro:thumb>
+
+        <xacro:index name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </xacro:index>
+
+        <xacro:middle name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </xacro:middle>
+
+        <xacro:ring name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </xacro:ring>
+
+        <xacro:pinky name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </xacro:pinky>
+
+    </xacro:macro>
+</robot>
+

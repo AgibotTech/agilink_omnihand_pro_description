@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="thumb" params="name mirror mirror_mesh *origin">
+        <!-- thumb  -->
+        <link name="${name}_thumb_metacarpals_base1">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals_base1.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals_base1.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_metacarpals_base1_com_x} ${thumb_metacarpals_base1_com_y*mirror} ${thumb_metacarpals_base1_com_z}" />
+                <mass value="${thumb_metacarpals_mass}" />
+                <inertia
+                    ixx="${thumb_metacarpals_base1_ixx}" ixy="${thumb_metacarpals_base1_ixy*mirror}"
+                    ixz="${thumb_metacarpals_base1_ixz}"
+                    iyy="${thumb_metacarpals_base1_iyy}" iyz="${thumb_metacarpals_base1_iyz*mirror}" 
+                    izz="${thumb_metacarpals_base1_izz}" />
+            </inertial>
+        </link>
+
+        <joint name="${name}_thumb_roll_joint" type="revolute">
+            <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="0 0 0" />
+            <parent link="${name}_hand_base_link" />
+            <child link="${name}_thumb_metacarpals_base1" />
+            <axis xyz="1 0 0" />
+
+            <xacro:if value="${mirror_mesh == True}">
+                <limit effort="${thumb_roll_torque_max}" velocity="${thumb_roll_velocity_max}"
+                    lower="${thumb_roll_position_max*mirror}"
+                    upper="${thumb_roll_position_min*mirror}" />
+            </xacro:if>
+            <xacro:if value="${mirror_mesh == False}">
+                <limit effort="${thumb_roll_torque_max}" velocity="${thumb_roll_velocity_max}"
+                    lower="${thumb_roll_position_min}" upper="${thumb_roll_position_max}" />
+            </xacro:if>
+        </joint>    
+
+        <link name="${name}_thumb_metacarpals_base2">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals_base2.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals_base2.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_metacarpals_base2_com_x} ${thumb_metacarpals_base2_com_y*mirror} ${thumb_metacarpals_base2_com_z}" />
+                <mass value="${thumb_metacarpals_base2_mass}" />
+                <inertia
+                    ixx="${thumb_metacarpals_base2_ixx}" ixy="${thumb_metacarpals_base2_ixy*mirror}"
+                    ixz="${thumb_metacarpals_base2_ixz}"
+                    iyy="${thumb_metacarpals_base2_iyy}" iyz="${thumb_metacarpals_base2_iyz*mirror}" 
+                    izz="${thumb_metacarpals_base2_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_metacarpals_base2_collision_box_x} ${thumb_metacarpals_base2_collision_box_y*mirror} ${thumb_metacarpals_base2_collision_box_z}" />
+                <geometry>
+                    <box
+                        size="${thumb_metacarpals_base2_collision_box_l} ${thumb_metacarpals_base2_collision_box_w} ${thumb_metacarpals_base2_collision_box_h}" />
+                </geometry>
+            </collision>            
+        </link>
+
+        <joint name="${name}_thumb_abad_joint" type="revolute">
+            <origin xyz="${thumb_abad_x} ${thumb_abad_y*mirror} ${thumb_abad_z}" 
+                    rpy="${thumb_abad_r*mirror} ${thumb_abad_p} ${thumb_abad_yy*mirror}" />
+            <parent link="${name}_thumb_metacarpals_base1" />
+            <child link="${name}_thumb_metacarpals_base2" />
+            <axis xyz="0 0 1" />
+
+            <xacro:if value="${mirror_mesh == True}">
+                <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
+                    lower="${thumb_abad_position_max*mirror}"
+                    upper="${thumb_abad_position_min*mirror}" />
+            </xacro:if>
+            <xacro:if value="${mirror_mesh == False}">
+                <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
+                    lower="${thumb_abad_position_min}" upper="${thumb_abad_position_max}" />
+            </xacro:if>
+        </joint>
+
+        <link name="${name}_thumb_metacarpals">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_metacarpals_com_x} ${thumb_metacarpals_com_y*mirror} ${thumb_metacarpals_com_z}" />
+                <mass value="${thumb_metacarpals_mass}" />
+                <inertia
+                    ixx="${thumb_metacarpals_ixx}" ixy="${thumb_metacarpals_ixy*mirror}"
+                    ixz="${thumb_metacarpals_ixz}"
+                    iyy="${thumb_metacarpals_iyy}" iyz="${thumb_metacarpals_iyz*mirror}" 
+                    izz="${thumb_metacarpals_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_metacarpals_collision_box_x} ${thumb_metacarpals_collision_box_y*mirror} ${thumb_metacarpals_collision_box_z}" />
+                <geometry>
+                    <box
+                        size="${thumb_metacarpals_collision_box_l} ${thumb_metacarpals_collision_box_w} ${thumb_metacarpals_collision_box_h}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_thumb_mcp_joint" type="revolute">
+            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="0 ${thumb_mcp_p} 0" />
+            <parent link="${name}_thumb_metacarpals_base2" />
+            <child link="${name}_thumb_metacarpals" />
+            <axis xyz="0 1 0" />
+            <limit effort="${thumb_mcp_torque_max}" velocity="${thumb_mcp_velocity_max}"
+                lower="${thumb_mcp_position_min}" upper="${thumb_mcp_position_max}" />
+        </joint>
+
+        <link name="${name}_thumb_proximal">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_proximal.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_proximal.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_proximal_com_x} ${thumb_proximal_com_y*mirror} ${thumb_proximal_com_z}" />
+                <mass value="${thumb_proximal_mass}" />
+                <inertia
+                    ixx="${thumb_proximal_ixx}" ixy="${thumb_proximal_ixy*mirror}" ixz="${thumb_proximal_ixz}"
+                    iyy="${thumb_proximal_iyy}" iyz="${thumb_proximal_iyz*mirror}" izz="${thumb_proximal_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 ${thumb_proximal_collision_cylinder_rotp*mirror} 0"
+                    xyz="${thumb_proximal_collision_cylinder_x} ${thumb_proximal_collision_cylinder_y*mirror} ${thumb_proximal_collision_cylinder_z}" />
+                <geometry>
+                    <cylinder radius="${thumb_proximal_collision_cylinder_r}" length="${thumb_proximal_collision_cylinder_l}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_thumb_pip_joint" type="revolute">
+            <origin xyz="${thumb_pip_x} ${thumb_pip_y*mirror} ${thumb_pip_z}" rpy="0 0 0" />
+            <parent link="${name}_thumb_metacarpals" />
+            <child link="${name}_thumb_proximal" />
+            <axis xyz="0 1 0" />
+
+            <limit effort="${thumb_pip_torque_max}" velocity="${thumb_pip_velocity_max}"
+                lower="${thumb_pip_position_min}" upper="${thumb_pip_position_max}" />
+        </joint>
+
+        <link name="${name}_thumb_distal">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_distal.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_distal.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="white" />
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0"
+                    xyz="${thumb_distal_com_x} ${thumb_distal_com_y*mirror} ${thumb_distal_com_z}" />
+                <mass value="${thumb_distal_mass}" />
+                <inertia
+                    ixx="${thumb_distal_ixx}" ixy="${thumb_distal_ixy*mirror}"
+                    ixz="${thumb_distal_ixz}"
+                    iyy="${thumb_distal_iyy}" iyz="${thumb_distal_iyz*mirror}"
+                    izz="${thumb_distal_izz}" />
+            </inertial>
+            <collision>
+                <origin rpy="0 ${thumb_distal_collision_cylinder_rotp*mirror} 0"
+                    xyz="${thumb_distal_collision_cylinder_x} ${thumb_distal_collision_cylinder_y*mirror} ${thumb_distal_collision_cylinder_z}" />
+                <geometry>
+                    <cylinder radius="${thumb_distal_collision_cylinder_r}" length="${thumb_distal_collision_cylinder_l}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_thumb_dip_joint" type="revolute">
+            <origin xyz=" ${thumb_dip_x}  ${thumb_dip_y*mirror} ${thumb_dip_z}" rpy="0 0 0" />
+            <parent link="${name}_thumb_proximal" />
+            <child link="${name}_thumb_distal" />
+            <axis xyz="0 1 0" />
+
+            <limit effort="${thumb_dip_torque_max}" velocity="${thumb_dip_velocity_max}"
+                lower="${thumb_dip_position_min}" upper="${thumb_dip_position_max}" />
+            <!-- <mimic
+                joint="$thumb_pip_joint"
+                multiplier="${thumb_dip_multiplier}"
+                offset="0" /> -->
+        </joint>
+
+        <link name="${name}_thumb_distal_vertices_virtual_coordinates">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0" />
+                <geometry>
+                    <xacro:if value="${mirror_mesh == True}">
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
+                    </xacro:if>
+                    <xacro:if value="${mirror_mesh == False}">
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
+                    </xacro:if>
+                </geometry>
+                <material name="tips" />
+            </visual>
+        </link>
+
+        <joint name="${name}_thumb_tips" type="fixed">
+            <origin xyz="${thumb_tip_x} ${thumb_tip_y*mirror} ${thumb_tip_z}" rpy="0 0 0" />
+            <parent link="${name}_thumb_distal" />
+            <child link="${name}_thumb_distal_vertices_virtual_coordinates" />
+            <axis xyz="0 0 0" />
+        </joint>
+
+    </xacro:macro>
+</robot>
