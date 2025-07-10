@@ -27,7 +27,7 @@
                     iyy="${pinky_proximal_iyy}" iyz="${pinky_proximal_iyz}" izz="${pinky_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${pinky_proximal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${pinky_proximal_collision_x} ${pinky_proximal_collision_y} ${pinky_proximal_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_proximal_collision_r}" length="${pinky_proximal_collision_l}" />
                 </geometry>
@@ -65,7 +65,7 @@
                     iyy="${pinky_middle_iyy}" iyz="${pinky_middle_iyz}" izz="${pinky_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${pinky_middle_collision_z}" />
+                <origin rpy="0 0 0" xyz="${pinky_middle_collision_x} ${pinky_middle_collision_y} ${pinky_middle_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_middle_collision_r}" length="${pinky_middle_collision_l}" />
                 </geometry>
@@ -105,7 +105,7 @@
                     izz="${pinky_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${pinky_distal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${pinky_distal_collision_x} ${pinky_distal_collision_y} ${pinky_distal_collision_z}" />
                 <geometry>
                     <cylinder radius="${pinky_distal_collision_r}" length="${pinky_distal_collision_l}" />
                 </geometry>

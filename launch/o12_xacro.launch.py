@@ -12,22 +12,22 @@ def launch_setup(context, *args, **kwargs):
     # package
     pkg_dir = get_package_share_directory('o12_description')
 
-    urdf_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t1_right.urdf')
+    xacro_path = os.path.join(get_package_share_directory(
+        'o12_description'), 'urdf/xacro', 'o12_t1_right.xacro')
     
     rviz_arguments = ['-d', os.path.join(pkg_dir, 'rviz', 'o12_right_hand1.rviz')]
 
     hand_type = LaunchConfiguration('hand_type').perform(context)  
     # urdf
     if hand_type == 'left':
-        urdf_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t1_left.urdf')
+        xacro_path = os.path.join(get_package_share_directory(
+        'o12_description'), 'urdf/xacro', 'o12_t1_left.xacro')
         rviz_arguments=['-d', [os.path.join(pkg_dir, 'rviz', 'o12_left_hand1.rviz')]]
     
-    # urdf_contents = xacro.process_file(xacro_path).toprettyxml(indent='  ')
+    urdf_contents = xacro.process_file(xacro_path).toprettyxml(indent='  ')
     
-    with open(urdf_path, 'r') as infp:
-        urdf_contents = infp.read()
+#    with open(urdf_path, 'r') as infp:
+#        urdf_contents = infp.read()
 
     joint_state_publisher_node = Node(
         package='joint_state_publisher_gui',
@@ -57,7 +57,7 @@ def launch_setup(context, *args, **kwargs):
     )
 
     # rviz2_node = Node(
-    #     package='rviz2',
+    #     package ='rviz2',
     #     executable='rviz2',
     #     name='rviz2',
     #     output='screen'

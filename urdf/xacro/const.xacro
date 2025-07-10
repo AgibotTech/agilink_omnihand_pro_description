@@ -464,100 +464,115 @@
     <xacro:property name="palm_collision_cylinder_l" value="0.010" />
 
     <xacro:property name="palm_collision_box_z" value="0.057" />
-    <xacro:property name="palm_collision_box_l" value="0.04" />
-    <xacro:property name="palm_collision_box_w" value="0.082" />
+    <xacro:property name="palm_collision_box_l" value="0.05" />
+    <xacro:property name="palm_collision_box_w" value="0.09" />
     <xacro:property name="palm_collision_box_h" value="0.09" />
 
     <!-- thumb -->
+    <xacro:property name="thumb_metacarpals_base2_collision_box_x" value="0" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_y" value="0" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_z" value="0" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_l" value="0.04" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_w" value="0.006" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_h" value="0.02" />
+
     <xacro:property name="thumb_metacarpals_collision_box_x" value="0.03" />
     <xacro:property name="thumb_metacarpals_collision_box_y" value="0" />
-    <xacro:property name="thumb_metacarpals_collision_box_z" value="0" />
+    <xacro:property name="thumb_metacarpals_collision_box_z" value="0.005" />
     <xacro:property name="thumb_metacarpals_collision_box_l" value="0.064" />
-    <xacro:property name="thumb_metacarpals_collision_box_w" value="0.032" />
-    <xacro:property name="thumb_metacarpals_collision_box_h" value="0.032" />
+    <xacro:property name="thumb_metacarpals_collision_box_w" value="0.023" />
+    <xacro:property name="thumb_metacarpals_collision_box_h" value="0.030" />
 
+    <xacro:property name="thumb_proximal_collision_cylinder_rotp" value="1.57" />
+    <xacro:property name="thumb_proximal_collision_cylinder_x" value="0.02" />
+    <xacro:property name="thumb_proximal_collision_cylinder_y" value="0" />
+    <xacro:property name="thumb_proximal_collision_cylinder_z" value="0.001" />
+    <xacro:property name="thumb_proximal_collision_cylinder_r" value="0.01" />
+    <xacro:property name="thumb_proximal_collision_cylinder_l" value="0.02" />
 
-    <!-- <xacro:property name="thumb_metacarpals_collision_cylinder_z" value="0.00725" />
-    <xacro:property name="thumb_metacarpals_collision_cylinder_r" value="0.028" />
-    <xacro:property name="thumb_metacarpals_collision_cylinder_l" value="0.0145" /> -->
-
-    <xacro:property name="thumb_proximal_collision_box_x" value="0.02" />
-    <xacro:property name="thumb_proximal_collision_box_y" value="0" />
-    <xacro:property name="thumb_proximal_collision_box_z" value="0" />
-    <xacro:property name="thumb_proximal_collision_box_l" value="0.02" />
-    <xacro:property name="thumb_proximal_collision_box_w" value="0.02" />
-    <xacro:property name="thumb_proximal_collision_box_h" value="0.02" />
-
-    <!-- <xacro:property name="thumb_proximal_collision_cylinder_z" value="0.00725" />
-    <xacro:property name="thumb_proximal_collision_cylinder_r" value="0.028" />
-    <xacro:property name="thumb_proximal_collision_cylinder_l" value="0.0145" /> -->
-    <!-- 
-    <xacro:property name="thumb_distal_collision_box_rotr" value="-0.2" />
-    <xacro:property name="thumb_distal_collision_box_y" value="0.0116" />
-    <xacro:property name="thumb_distal_collision_box_z" value="-0.0032" />
-    <xacro:property name="thumb_distal_collision_box_l" value="0.019" />
-    <xacro:property name="thumb_distal_collision_box_w" value="0.035" />
-    <xacro:property name="thumb_distal_collision_box_h" value="0.0225" />  -->
-
-    <xacro:property name="thumb_distal_collision_cylinder_rotp" value="-1.7" />
-    <xacro:property name="thumb_distal_collision_cylinder_x" value="0.01" />
+    <xacro:property name="thumb_distal_collision_cylinder_rotp" value="1.57" />
+    <xacro:property name="thumb_distal_collision_cylinder_x" value="0.015" />
     <xacro:property name="thumb_distal_collision_cylinder_y" value="0" />
-    <xacro:property name="thumb_distal_collision_cylinder_z" value="0" />
+    <xacro:property name="thumb_distal_collision_cylinder_z" value="0.002" />
     <xacro:property name="thumb_distal_collision_cylinder_r" value="0.01" />
     <xacro:property name="thumb_distal_collision_cylinder_l" value="0.03" />
 
 
     <!-- index -->
-    <xacro:property name="index_proximal_collision_z" value="0.014" />
+    <xacro:property name="index_proximal_collision_x" value="-0.002" />
+    <xacro:property name="index_proximal_collision_y" value="0" />
+    <xacro:property name="index_proximal_collision_z" value="0.016" />
     <xacro:property name="index_proximal_collision_r" value="0.01" />
-    <xacro:property name="index_proximal_collision_l" value="0.035" />
+    <xacro:property name="index_proximal_collision_l" value="0.038" />
 
-    <xacro:property name="index_middle_collision_z" value="0.014" />
+    <xacro:property name="index_middle_collision_x" value="0.001" />
+    <xacro:property name="index_middle_collision_y" value="0" />
+    <xacro:property name="index_middle_collision_z" value="0.015" />
     <xacro:property name="index_middle_collision_r" value="0.01" />
-    <xacro:property name="index_middle_collision_l" value="0.028" />
+    <xacro:property name="index_middle_collision_l" value="0.022" />
 
-    <xacro:property name="index_distal_collision_z" value="0.014" />
+    <xacro:property name="index_distal_collision_x" value="-0.006" />
+    <xacro:property name="index_distal_collision_y" value="0" />
+    <xacro:property name="index_distal_collision_z" value="0.013" />
     <xacro:property name="index_distal_collision_r" value="0.01" />
-    <xacro:property name="index_distal_collision_l" value="0.018" />
+    <xacro:property name="index_distal_collision_l" value="0.02" />
 
 
     <!-- middle -->
-    <xacro:property name="middle_proximal_collision_z" value="0.014" />
+    <xacro:property name="middle_proximal_collision_x" value="-0.002" />
+    <xacro:property name="middle_proximal_collision_y" value="0" />
+    <xacro:property name="middle_proximal_collision_z" value="0.016" />
     <xacro:property name="middle_proximal_collision_r" value="0.01" />
-    <xacro:property name="middle_proximal_collision_l" value="0.035" />
+    <xacro:property name="middle_proximal_collision_l" value="0.04" />
 
+    <xacro:property name="middle_middle_collision_x" value="0.001" />
+    <xacro:property name="middle_middle_collision_y" value="0" />
     <xacro:property name="middle_middle_collision_z" value="0.014" />
     <xacro:property name="middle_middle_collision_r" value="0.01" />
     <xacro:property name="middle_middle_collision_l" value="0.028" />
 
+    <xacro:property name="middle_distal_collision_x" value="-0.006" />
+    <xacro:property name="middle_distal_collision_y" value="0" />
     <xacro:property name="middle_distal_collision_z" value="0.014" />
     <xacro:property name="middle_distal_collision_r" value="0.01" />
     <xacro:property name="middle_distal_collision_l" value="0.018" />
 
 
     <!-- ring -->
+    <xacro:property name="ring_proximal_collision_x" value="-0.002" />
+    <xacro:property name="ring_proximal_collision_y" value="0" />
     <xacro:property name="ring_proximal_collision_z" value="0.014" />
     <xacro:property name="ring_proximal_collision_r" value="0.01" />
     <xacro:property name="ring_proximal_collision_l" value="0.035" />
 
+    <xacro:property name="ring_middle_collision_x" value="0.0015" />
+    <xacro:property name="ring_middle_collision_y" value="0" />
     <xacro:property name="ring_middle_collision_z" value="0.014" />
     <xacro:property name="ring_middle_collision_r" value="0.01" />
     <xacro:property name="ring_middle_collision_l" value="0.028" />
 
+    <xacro:property name="ring_distal_collision_x" value="-0.006" />
+    <xacro:property name="ring_distal_collision_y" value="0" />
     <xacro:property name="ring_distal_collision_z" value="0.014" />
     <xacro:property name="ring_distal_collision_r" value="0.01" />
     <xacro:property name="ring_distal_collision_l" value="0.018" />
 
 
     <!-- pinky -->
+    <xacro:property name="pinky_proximal_collision_x" value="-0.002" />
+    <xacro:property name="pinky_proximal_collision_y" value="0" />
     <xacro:property name="pinky_proximal_collision_z" value="0.014" />
     <xacro:property name="pinky_proximal_collision_r" value="0.01" />
     <xacro:property name="pinky_proximal_collision_l" value="0.035" />
 
+    <xacro:property name="pinky_middle_collision_x" value="0.0015" />
+    <xacro:property name="pinky_middle_collision_y" value="0" />
     <xacro:property name="pinky_middle_collision_z" value="0.014" />
     <xacro:property name="pinky_middle_collision_r" value="0.01" />
     <xacro:property name="pinky_middle_collision_l" value="0.028" />
 
+    <xacro:property name="pinky_distal_collision_x" value="-0.006" />
+    <xacro:property name="pinky_distal_collision_y" value="0" />
     <xacro:property name="pinky_distal_collision_z" value="0.014" />
     <xacro:property name="pinky_distal_collision_r" value="0.01" />
     <xacro:property name="pinky_distal_collision_l" value="0.018" />

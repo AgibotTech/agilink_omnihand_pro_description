@@ -51,14 +51,14 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
-      Description File: /home/agiuser/o12hand_ws/src/o12_description/urdf/xacro/o12_t1_right.urdf
-      Description Source: File
+      Description File: ""
+      Description Source: Topic
       Description Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: ""
+        Value: /robot_description
       Enabled: true
       Links:
         All Links Enabled: true
@@ -245,26 +245,46 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.095045328140259
+      Distance: 0.4093235731124878
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -0.02147490717470646
+        Y: 0.05275207385420799
+        Z: 0.11444976925849915
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.35539811849594116
+      Pitch: 0.0853983536362648
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.22539854049682617
-    Saved: ~
+      Yaw: 6.193583965301514
+    Saved:
+      - Class: rviz_default_plugins/Orbit
+        Distance: 10
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 0
+          Y: 0
+          Z: 0
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.785398006439209
+        Target Frame: <Fixed Frame>
+        Value: Orbit (rviz)
+        Yaw: 0.785398006439209
 Window Geometry:
   Displays:
     collapsed: false
@@ -281,5 +301,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 459
-  Y: 288
+  X: 1360
+  Y: 340
