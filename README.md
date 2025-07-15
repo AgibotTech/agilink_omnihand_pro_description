@@ -41,6 +41,12 @@ xacro o12_t1_left.xacro > o12_t1_left.urdf
 To visualize O12Hand in RViz, run:
 
 ```bash
-ros2 launch o12_description o12_description_launch.py
-ros2 launch o12_description o12_description_launch.py hand_type:=left
+ros2 launch o12_description o12_description.launch.py
+ros2 launch o12_description o12_description.launch.py hand_type:=left
+```
+
+launch from xacro, run:
+```bash
+ros2 launch o12_description o12_xacro.launch.py
+ros2 launch o12_description o12_xacro.launch.py hand_type:=left
 ```
