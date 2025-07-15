@@ -65,132 +65,132 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        L_hand_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_index_distal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_index_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_index_metacarpals:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_index_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_index_proximal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_middle_distal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_middle_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_middle_metacarpals:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_middle_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_middle_proximal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_pinky_distal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_pinky_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_pinky_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_pinky_proximal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_ring_distal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_ring_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_ring_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_ring_proximal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_distal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_metacarpals:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_metacarpals_base1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_metacarpals_base2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        L_thumb_proximal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         Link Tree Style: Links in Alphabetic Order
-        hand_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        index_distal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        index_distal_vertices_virtual_coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        index_metacarpals:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        index_middle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        index_proximal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        middle_distal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        middle_distal_vertices_virtual_coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        middle_metacarpals:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        middle_middle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        middle_proximal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinky_distal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinky_distal_vertices_virtual_coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinky_middle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinky_proximal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ring_distal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ring_distal_vertices_virtual_coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ring_middle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ring_proximal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_distal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_distal_vertices_virtual_coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_metacarpals:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_metacarpals_base1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_metacarpals_base2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        thumb_proximal:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Mass Properties:
         Inertia: false
         Mass: false
@@ -202,7 +202,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: hand_base_link
+    Fixed Frame: L_hand_base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -264,7 +264,27 @@ Visualization Manager:
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
       Yaw: 0.04539910703897476
-    Saved: ~
+    Saved:
+      - Class: rviz_default_plugins/Orbit
+        Distance: 0.3961794972419739
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -0.0326765701174736
+          Y: -0.024595264345407486
+          Z: 0.09596553444862366
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.2903984487056732
+        Target Frame: <Fixed Frame>
+        Value: Orbit (rviz)
+        Yaw: 0.04539910703897476
 Window Geometry:
   Displays:
     collapsed: false

@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /RobotModel1/Status1
       Splitter Ratio: 0.5
     Tree Height: 570
   - Class: rviz_common/Selection
@@ -67,123 +66,127 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        hand_base_link:
+        R_hand_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        index_distal:
+        R_index_distal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        index_distal_vertices virtual coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        index_metacarpals:
+        R_index_distal_vertices_virtual_coordinates:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        index_middle:
+        R_index_metacarpals:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        index_proximal:
+        R_index_middle:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        middle_distal:
+        R_index_proximal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        middle_distal_vertices virtual coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        middle_metacarpals:
+        R_middle_distal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        middle_middle:
+        R_middle_distal_vertices_virtual_coordinates:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        middle_proximal:
+        R_middle_metacarpals:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        pinky_distal:
+        R_middle_middle:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        pinky_distal_vertices virtual coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        pinky_middle:
+        R_middle_proximal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        pinky_proximal:
+        R_pinky_distal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        ring_distal:
+        R_pinky_distal_vertices_virtual_coordinates:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        ring_distal_vertices virtual coordinates:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        ring_middle:
+        R_pinky_middle:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        ring_proximal:
+        R_pinky_proximal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_distal:
+        R_ring_distal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_distal_vertices_virtual_coordinates:
+        R_ring_distal_vertices_virtual_coordinates:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_metacarpals:
+        R_ring_middle:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_metacarpals_base1:
+        R_ring_proximal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_metacarpals_base2:
+        R_thumb_distal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        thumb_proximal:
+        R_thumb_distal_vertices_virtual_coordinates:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        R_thumb_metacarpals:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        R_thumb_metacarpals_base1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        R_thumb_metacarpals_base2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        R_thumb_proximal:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -199,7 +202,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: hand_base_link
+    Fixed Frame: R_hand_base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -278,5 +281,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1536
-  X: 615
-  Y: 315
+  X: 604
+  Y: 346
