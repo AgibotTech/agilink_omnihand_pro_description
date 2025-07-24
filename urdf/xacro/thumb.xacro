@@ -9,10 +9,10 @@
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals_base1.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_metacarpals_base1.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals_base1.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_metacarpals_base1.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -51,10 +51,10 @@
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals_base2.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_metacarpals_base2.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals_base2.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_metacarpals_base2.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -76,7 +76,7 @@
                     rpy="${thumb_abad_r*mirror} ${thumb_abad_p} ${thumb_abad_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base1" />
             <child link="${name}_thumb_metacarpals_base2" />
-            <axis xyz="0 0 1" />
+            <axis xyz="0 0 -1" />
 
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
@@ -94,10 +94,10 @@
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_metacarpals.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_metacarpals.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_metacarpals.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_metacarpals.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -123,7 +123,7 @@
         </link>
 
         <joint name="${name}_thumb_mcp_joint" type="revolute">
-            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="0 ${thumb_mcp_p} 0" />
+            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="${thumb_mcp_r*mirror} ${thumb_mcp_p} ${thumb_mcp_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base2" />
             <child link="${name}_thumb_metacarpals" />
             <axis xyz="0 1 0" />
@@ -136,10 +136,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_proximal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_proximal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -177,10 +177,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_distal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_distal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -205,7 +205,7 @@
         </link>
 
         <joint name="${name}_thumb_dip_joint" type="revolute">
-            <origin xyz=" ${thumb_dip_x}  ${thumb_dip_y*mirror} ${thumb_dip_z}" rpy="0 0 0" />
+            <origin xyz=" ${thumb_dip_x}  ${thumb_dip_y} ${thumb_dip_z}" rpy="0 0 0" />
             <parent link="${name}_thumb_proximal" />
             <child link="${name}_thumb_distal" />
             <axis xyz="0 1 0" />
@@ -223,10 +223,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/thumb_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="tips" />

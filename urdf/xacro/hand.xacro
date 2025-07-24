@@ -20,10 +20,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/hand_base_link.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/hand_base_link.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/hand_base_link.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/hand_base_link.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />

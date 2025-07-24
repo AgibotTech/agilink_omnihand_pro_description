@@ -10,10 +10,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_proximal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_proximal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -48,10 +48,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_middle.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_middle.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_middle.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_middle.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -90,10 +90,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
@@ -134,10 +134,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="tips" />

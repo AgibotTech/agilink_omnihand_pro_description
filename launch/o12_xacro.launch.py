@@ -13,7 +13,7 @@ def launch_setup(context, *args, **kwargs):
     pkg_dir = get_package_share_directory('o12_description')
 
     xacro_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t1_right.xacro')
+        'o12_description'), 'urdf/xacro', 'o12_t2_right.xacro')
     
     rviz_arguments = ['-d', os.path.join(pkg_dir, 'rviz', 'o12_right_hand1.rviz')]
 
@@ -21,7 +21,7 @@ def launch_setup(context, *args, **kwargs):
     # urdf
     if hand_type == 'left':
         xacro_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t1_left.xacro')
+        'o12_description'), 'urdf/xacro', 'o12_t2_left.xacro')
         rviz_arguments=['-d', [os.path.join(pkg_dir, 'rviz', 'o12_left_hand1.rviz')]]
     
     urdf_contents = xacro.process_file(xacro_path).toprettyxml(indent='  ')
