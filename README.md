@@ -33,8 +33,8 @@ To generate the OmniHand URDF file from the Xacro description, use:
 
 ```bash
 cd ~/o12_ws/src/o12_description/urdf/xacro
-xacro o12_t1_right.xacro > o12_t1_right.urdf
-xacro o12_t1_left.xacro > o12_t1_left.urdf
+xacro o12_t2_right.xacro > o12_t2_right.urdf
+xacro o12_t2_left.xacro > o12_t2_left.urdf
 ```
 
 ## Visualization in RViz
