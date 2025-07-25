@@ -4,7 +4,6 @@
 
     <xacro:macro name="ring" params="name mirror mirror_mesh *origin">
         <!-- ring  -->
-
         <link name="${name}_ring_proximal">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
@@ -27,7 +26,7 @@
                     iyy="${ring_proximal_iyy}" iyz="${ring_proximal_iyz}" izz="${ring_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${ring_proximal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${ring_proximal_collision_x} ${ring_proximal_collision_y} ${ring_proximal_collision_z}" />
                 <geometry>
                     <cylinder radius="${ring_proximal_collision_r}" length="${ring_proximal_collision_l}" />
                 </geometry>
@@ -65,7 +64,7 @@
                     iyy="${ring_middle_iyy}" iyz="${ring_middle_iyz}" izz="${ring_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${ring_middle_collision_z}" />
+                <origin rpy="0 0 0" xyz="${ring_middle_collision_x} ${ring_middle_collision_y} ${ring_middle_collision_z}" />
                 <geometry>
                     <cylinder radius="${ring_middle_collision_r}" length="${ring_middle_collision_l}" />
                 </geometry>
@@ -109,7 +108,7 @@
                     izz="${ring_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${ring_distal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${ring_distal_collision_x} ${ring_distal_collision_y} ${ring_distal_collision_z}" />
                 <geometry>
                     <cylinder radius="${ring_distal_collision_r}" length="${ring_distal_collision_l}" />
                 </geometry>

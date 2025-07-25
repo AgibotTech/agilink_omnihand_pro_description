@@ -68,7 +68,7 @@
                     iyy="${middle_proximal_iyy}" iyz="${middle_proximal_iyz}" izz="${middle_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${middle_proximal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${middle_proximal_collision_x} ${middle_proximal_collision_y} ${middle_proximal_collision_z}" />
                 <geometry>
                     <cylinder radius="${middle_proximal_collision_r}" length="${middle_proximal_collision_l}" />
                 </geometry>
@@ -106,7 +106,7 @@
                     iyy="${middle_middle_iyy}" iyz="${middle_middle_iyz}" izz="${middle_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${middle_middle_collision_z}" />
+                <origin rpy="0 0 0" xyz="${middle_middle_collision_x} ${middle_middle_collision_y} ${middle_middle_collision_z}" />
                 <geometry>
                     <cylinder radius="${middle_middle_collision_r}" length="${middle_middle_collision_l}" />
                 </geometry>
@@ -146,7 +146,7 @@
                     izz="${middle_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 ${middle_distal_collision_z}" />
+                <origin rpy="0 0 0" xyz="${middle_distal_collision_x} ${middle_distal_collision_y} ${middle_distal_collision_z}" />
                 <geometry>
                     <cylinder radius="${middle_distal_collision_r}" length="${middle_distal_collision_l}" />
                 </geometry>
