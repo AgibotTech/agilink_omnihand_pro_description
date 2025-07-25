@@ -109,34 +109,29 @@
     <xacro:property name="pinky_tips_y" value="0" />
     <xacro:property name="pinky_tips_z" value="0.026185" />
 
-    <!-- mimic joint
-    <xacro:property name="thumb_pip_multiplier" value="1.33" />
-    <xacro:property name="thumb_dip_multiplier" value="1.3" />
-    <xacro:property name="index_metacarpals_dip_multiplier" value="1.097" /> -->
-
 
     <!-- joint limits -->
-    <xacro:property name="thumb_roll_position_max" value="0.6489" />
-    <xacro:property name="thumb_roll_position_min" value="-0.2930" />
+    <xacro:property name="thumb_roll_position_max" value="0.94" />
+    <xacro:property name="thumb_roll_position_min" value="0" />
     <xacro:property name="thumb_roll_velocity_max" value="1" />
     <xacro:property name="thumb_roll_torque_max" value="100" />
 
-    <xacro:property name="thumb_abad_position_max" value="1.3868" />
+    <xacro:property name="thumb_abad_position_max" value="1.38" />
     <xacro:property name="thumb_abad_position_min" value="0" />
     <xacro:property name="thumb_abad_velocity_max" value="1" />
     <xacro:property name="thumb_abad_torque_max" value="100" />
 
-    <xacro:property name="thumb_mcp_position_max" value="0.8268" />
+    <xacro:property name="thumb_mcp_position_max" value="0.82" />
     <xacro:property name="thumb_mcp_position_min" value="0" />
     <xacro:property name="thumb_mcp_velocity_max" value="1" />
     <xacro:property name="thumb_mcp_torque_max" value="100" />
 
-    <xacro:property name="thumb_pip_position_max" value="1.2908" />
+    <xacro:property name="thumb_pip_position_max" value="1.29" />
     <xacro:property name="thumb_pip_position_min" value="0" />
     <xacro:property name="thumb_pip_velocity_max" value="100" />
     <xacro:property name="thumb_pip_torque_max" value="1" />
 
-    <xacro:property name="thumb_dip_position_max" value="1.3781" />
+    <xacro:property name="thumb_dip_position_max" value="1.37" />
     <xacro:property name="thumb_dip_position_min" value="0" />
     <xacro:property name="thumb_dip_velocity_max" value="1" />
     <xacro:property name="thumb_dip_torque_max" value="100" />
@@ -146,72 +141,70 @@
     <xacro:property name="index_abad_velocity_max" value="0" />
     <xacro:property name="index_abad_torque_max" value="0" />
 
-    <xacro:property name="index_mcp_position_max" value="1.5" />
+    <xacro:property name="index_mcp_position_max" value="1.35" />
     <xacro:property name="index_mcp_position_min" value="0" />
-    <xacro:property name="index_mcp_velocity_max" value="0" />
-    <xacro:property name="index_mcp_torque_max" value="0" />
+    <xacro:property name="index_mcp_velocity_max" value="1" />
+    <xacro:property name="index_mcp_torque_max" value="100" />
 
-    <xacro:property name="index_pip_position_max" value="1.57" />
+    <xacro:property name="index_pip_position_max" value="1.53" />
     <xacro:property name="index_pip_position_min" value="0" />
-    <xacro:property name="index_pip_velocity_max" value="0" />
-    <xacro:property name="index_pip_torque_max" value="0" />
+    <xacro:property name="index_pip_velocity_max" value="1" />
+    <xacro:property name="index_pip_torque_max" value="100" />
 
-    <xacro:property name="index_dip_position_max" value="1.28" />
+    <xacro:property name="index_dip_position_max" value="1.37" />
     <xacro:property name="index_dip_position_min" value="0" />
-    <xacro:property name="index_dip_velocity_max" value="0" />
-    <xacro:property name="index_dip_torque_max" value="0" />
+    <xacro:property name="index_dip_velocity_max" value="1" />
+    <xacro:property name="index_dip_torque_max" value="100" />
 
     <xacro:property name="middle_abad_position_max" value="0.26" />
     <xacro:property name="middle_abad_position_min" value="-0.26" />
-    <xacro:property name="middle_abad_velocity_max" value="0" />
-    <xacro:property name="middle_abad_torque_max" value="0" />
+    <xacro:property name="middle_abad_velocity_max" value="1" />
+    <xacro:property name="middle_abad_torque_max" value="100" />
 
-    <xacro:property name="middle_mcp_position_max" value="1.49" />
+    <xacro:property name="middle_mcp_position_max" value="1.35" />
     <xacro:property name="middle_mcp_position_min" value="0" />
-    <xacro:property name="middle_mcp_velocity_max" value="0" />
-    <xacro:property name="middle_mcp_torque_max" value="0" />
+    <xacro:property name="middle_mcp_velocity_max" value="1" />
+    <xacro:property name="middle_mcp_torque_max" value="100" />
 
-    <xacro:property name="middle_pip_position_max" value="1.57" />
+    <xacro:property name="middle_pip_position_max" value="1.82" />
     <xacro:property name="middle_pip_position_min" value="0" />
-    <xacro:property name="middle_pip_velocity_max" value="0" />
-    <xacro:property name="middle_pip_torque_max" value="0" />
+    <xacro:property name="middle_pip_velocity_max" value="1" />
+    <xacro:property name="middle_pip_torque_max" value="100" />
 
-    <xacro:property name="middle_dip_position_max" value="1.45" />
+    <xacro:property name="middle_dip_position_max" value="1.25" />
     <xacro:property name="middle_dip_position_min" value="0" />
-    <xacro:property name="middle_dip_velocity_max" value="0" />
-    <xacro:property name="middle_dip_torque_max" value="0" />
+    <xacro:property name="middle_dip_velocity_max" value="1" />
+    <xacro:property name="middle_dip_torque_max" value="100" />
 
-
-    <xacro:property name="ring_mcp_position_max" value="1.5583" />
+    <xacro:property name="ring_mcp_position_max" value="1.55" />
     <xacro:property name="ring_mcp_position_min" value="0" />
-    <xacro:property name="ring_mcp_velocity_max" value="0" />
-    <xacro:property name="ring_mcp_torque_max" value="0" />
+    <xacro:property name="ring_mcp_velocity_max" value="1" />
+    <xacro:property name="ring_mcp_torque_max" value="100" />
 
-    <xacro:property name="ring_pip_position_max" value="1.37758" />
+    <xacro:property name="ring_pip_position_max" value="1.43" />
     <xacro:property name="ring_pip_position_min" value="0" />
-    <xacro:property name="ring_pip_velocity_max" value="0" />
-    <xacro:property name="ring_pip_torque_max" value="0" />
+    <xacro:property name="ring_pip_velocity_max" value="1" />
+    <xacro:property name="ring_pip_torque_max" value="100" />
 
-    <xacro:property name="ring_dip_position_max" value="1.2825" />
+    <xacro:property name="ring_dip_position_max" value="1.32" />
     <xacro:property name="ring_dip_position_min" value="0" />
-    <xacro:property name="ring_dip_velocity_max" value="0" />
-    <xacro:property name="ring_dip_torque_max" value="0" />
+    <xacro:property name="ring_dip_velocity_max" value="1" />
+    <xacro:property name="ring_dip_torque_max" value="100" />
 
-
-    <xacro:property name="pinky_mcp_position_max" value="1.5583" />
+    <xacro:property name="pinky_mcp_position_max" value="1.54" />
     <xacro:property name="pinky_mcp_position_min" value="0" />
-    <xacro:property name="pinky_mcp_velocity_max" value="0" />
-    <xacro:property name="pinky_mcp_torque_max" value="0" />
+    <xacro:property name="pinky_mcp_velocity_max" value="1" />
+    <xacro:property name="pinky_mcp_torque_max" value="100" />
 
-    <xacro:property name="pinky_pip_position_max" value="1.37758" />
+    <xacro:property name="pinky_pip_position_max" value="1.41" />
     <xacro:property name="pinky_pip_position_min" value="0" />
-    <xacro:property name="pinky_pip_velocity_max" value="0" />
-    <xacro:property name="pinky_pip_torque_max" value="0" />
+    <xacro:property name="pinky_pip_velocity_max" value="1" />
+    <xacro:property name="pinky_pip_torque_max" value="100" />
 
-    <xacro:property name="pinky_dip_position_max" value="1.2825" />
+    <xacro:property name="pinky_dip_position_max" value="1.33" />
     <xacro:property name="pinky_dip_position_min" value="0" />
-    <xacro:property name="pinky_dip_velocity_max" value="0" />
-    <xacro:property name="pinky_dip_torque_max" value="0" />
+    <xacro:property name="pinky_dip_velocity_max" value="1" />
+    <xacro:property name="pinky_dip_torque_max" value="100" />
 
 
     <!-- dynamics inertial value -->
@@ -478,34 +471,38 @@
     <xacro:property name="palm_collision_box_h" value="0.09" />
 
     <!-- thumb -->
+    <xacro:property name="thumb_metacarpals_base2_collision_box_rotr" value="0" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_rotp" value="0" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_roty" value="0.9" />
     <xacro:property name="thumb_metacarpals_base2_collision_box_x" value="0" />
     <xacro:property name="thumb_metacarpals_base2_collision_box_y" value="0" />
     <xacro:property name="thumb_metacarpals_base2_collision_box_z" value="0" />
-    <xacro:property name="thumb_metacarpals_base2_collision_box_l" value="0.04" />
+    <xacro:property name="thumb_metacarpals_base2_collision_box_l" value="0.035" />
     <xacro:property name="thumb_metacarpals_base2_collision_box_w" value="0.006" />
     <xacro:property name="thumb_metacarpals_base2_collision_box_h" value="0.02" />
 
-    <xacro:property name="thumb_metacarpals_collision_box_x" value="0.03" />
+    <xacro:property name="thumb_metacarpals_collision_box_rotp" value="1.57" />
+    <xacro:property name="thumb_metacarpals_collision_box_x" value="0.005" />
     <xacro:property name="thumb_metacarpals_collision_box_y" value="0" />
-    <xacro:property name="thumb_metacarpals_collision_box_z" value="0.005" />
+    <xacro:property name="thumb_metacarpals_collision_box_z" value="0.030" />
     <xacro:property name="thumb_metacarpals_collision_box_l" value="0.064" />
     <xacro:property name="thumb_metacarpals_collision_box_w" value="0.023" />
     <xacro:property name="thumb_metacarpals_collision_box_h" value="0.030" />
 
-    <xacro:property name="thumb_proximal_collision_cylinder_rotp" value="1.57" />
-    <xacro:property name="thumb_proximal_collision_cylinder_x" value="0.02" />
-    <xacro:property name="thumb_proximal_collision_cylinder_y" value="0" />
-    <xacro:property name="thumb_proximal_collision_cylinder_z" value="0.001" />
+    <xacro:property name="thumb_proximal_collision_cylinder_rotp" value="0" />
+    <xacro:property name="thumb_proximal_collision_cylinder_x" value="0" />
+    <xacro:property name="thumb_proximal_collision_cylinder_y" value="0.002" />
+    <xacro:property name="thumb_proximal_collision_cylinder_z" value="0.02" />
     <xacro:property name="thumb_proximal_collision_cylinder_r" value="0.01" />
     <xacro:property name="thumb_proximal_collision_cylinder_l" value="0.02" />
 
-    <xacro:property name="thumb_distal_collision_cylinder_rotp" value="1.57" />
-    <xacro:property name="thumb_distal_collision_cylinder_x" value="0.015" />
+    <xacro:property name="thumb_distal_collision_cylinder_rotp" value="0" />
+    <xacro:property name="thumb_distal_collision_cylinder_x" value="0" />
     <xacro:property name="thumb_distal_collision_cylinder_y" value="0" />
-    <xacro:property name="thumb_distal_collision_cylinder_z" value="0.002" />
+    <xacro:property name="thumb_distal_collision_cylinder_z" value="0.015" />
     <xacro:property name="thumb_distal_collision_cylinder_r" value="0.01" />
     <xacro:property name="thumb_distal_collision_cylinder_l" value="0.03" />
-
+    
 
     <!-- index -->
     <xacro:property name="index_proximal_collision_x" value="-0.002" />

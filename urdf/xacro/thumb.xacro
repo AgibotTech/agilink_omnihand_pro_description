@@ -30,7 +30,7 @@
         </link>
 
         <joint name="${name}_thumb_roll_joint" type="revolute">
-            <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="0 0 0" />
+            <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="-0.293 0 0" />
             <parent link="${name}_hand_base_link" />
             <child link="${name}_thumb_metacarpals_base1" />
             <axis xyz="1 0 0" />
@@ -70,7 +70,7 @@
                     izz="${thumb_metacarpals_base2_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0"
+                <origin rpy="${thumb_metacarpals_base2_collision_box_rotr} ${thumb_metacarpals_base2_collision_box_rotp*mirror} ${thumb_metacarpals_base2_collision_box_roty}"
                     xyz="${thumb_metacarpals_base2_collision_box_x} ${thumb_metacarpals_base2_collision_box_y*mirror} ${thumb_metacarpals_base2_collision_box_z}" />
                 <geometry>
                     <box
@@ -84,7 +84,7 @@
                     rpy="${thumb_abad_r*mirror} ${thumb_abad_p} ${thumb_abad_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base1" />
             <child link="${name}_thumb_metacarpals_base2" />
-            <axis xyz="0 0 1" />
+            <axis xyz="0 0 -1" />
 
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
@@ -121,7 +121,7 @@
                     izz="${thumb_metacarpals_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0"
+                <origin rpy="0 ${thumb_metacarpals_collision_box_rotp*mirror} 0"
                     xyz="${thumb_metacarpals_collision_box_x} ${thumb_metacarpals_collision_box_y*mirror} ${thumb_metacarpals_collision_box_z}" />
                 <geometry>
                     <box
@@ -131,7 +131,7 @@
         </link>
 
         <joint name="${name}_thumb_mcp_joint" type="revolute">
-            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="0 ${thumb_mcp_p} 0" />
+            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="${thumb_mcp_r} ${thumb_mcp_p} ${thumb_mcp_yy}" />
             <parent link="${name}_thumb_metacarpals_base2" />
             <child link="${name}_thumb_metacarpals" />
             <axis xyz="0 1 0" />
