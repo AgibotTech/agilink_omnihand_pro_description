@@ -35,39 +35,39 @@
     <xacro:property name="thumb_tip_y" value="-4.99999381474688E-05" />
     <xacro:property name="thumb_tip_z" value="0.0315676558844293" />
 
-    <xacro:property name="index_abad_x" value="-0.0103" />
-    <xacro:property name="index_abad_y" value="0.030778" />
-    <xacro:property name="index_abad_z" value="0.11935" />
+    <xacro:property name="index_abad_x" value="-0.00719999999308767" />
+    <xacro:property name="index_abad_y" value="0.030778354272632" />
+    <xacro:property name="index_abad_z" value="0.119355702147758" />
 
-    <xacro:property name="index_mcp_x" value="0.01047" />
+    <xacro:property name="index_mcp_x" value="0.00736980261911774" />
     <xacro:property name="index_mcp_y" value="0" />
     <xacro:property name="index_mcp_z" value="0" />
 
-    <xacro:property name="index_pip_x" value="-0.0039371" />
+    <xacro:property name="index_pip_x" value="-0.00305282449335901" />
     <xacro:property name="index_pip_y" value="0" />
-    <xacro:property name="index_pip_z" value="0.03983" />
+    <xacro:property name="index_pip_z" value="0.0399071116817979" />
 
-    <xacro:property name="index_dip_x" value="0.0057881" />
+    <xacro:property name="index_dip_x" value="0.00530686089658646" />
     <xacro:property name="index_dip_y" value="0" />
-    <xacro:property name="index_dip_z" value="0.026492" />
+    <xacro:property name="index_dip_z" value="0.0265922869892696" />
 
-    <xacro:property name="index_tips_x" value="-0.013777" />
+    <xacro:property name="index_tips_x" value="-0.0152816370939128" />
     <xacro:property name="index_tips_y" value="0" />
-    <xacro:property name="index_tips_z" value="0.02493" />
+    <xacro:property name="index_tips_z" value="0.0240371666710466" />
 
-    <xacro:property name="middle_abad_x" value="-0.0103" />
-    <xacro:property name="middle_abad_y" value="0.0066607" />
-    <xacro:property name="middle_abad_z" value="0.11935" />
+    <xacro:property name="middle_abad_x" value="-0.00720002856790489" />
+    <xacro:property name="middle_abad_y" value="0.00666067883725946" />
+    <xacro:property name="middle_abad_z" value="0.119355672566023" />
 
-    <xacro:property name="middle_mcp_x" value="0.01047" />
+    <xacro:property name="middle_mcp_x" value="0.00736980261904721" />
     <xacro:property name="middle_mcp_y" value="0" />
-    <xacro:property name="middle_mcp_z" value="-2.2703E-05" />
+    <xacro:property name="middle_mcp_z" value="0" />
 
-    <xacro:property name="middle_pip_x" value="-0.0041959" />
+    <xacro:property name="middle_pip_x" value="-0.004144" />
     <xacro:property name="middle_pip_y" value="0" />
-    <xacro:property name="middle_pip_z" value="0.044846" />
+    <xacro:property name="middle_pip_z" value="0.044828" />
 
-    <xacro:property name="middle_dip_x" value="0.0035929" />
+    <xacro:property name="middle_dip_x" value="0.00362953932909984" />
     <xacro:property name="middle_dip_y" value="1.3238E-05" />
     <xacro:property name="middle_dip_z" value="0.031617" />
 
