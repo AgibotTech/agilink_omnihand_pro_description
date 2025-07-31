@@ -131,7 +131,7 @@
         </link>
 
         <joint name="${name}_thumb_mcp_joint" type="revolute">
-            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="${thumb_mcp_r} ${thumb_mcp_p} ${thumb_mcp_yy}" />
+            <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="${thumb_mcp_r*mirror} ${thumb_mcp_p} ${thumb_mcp_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base2" />
             <child link="${name}_thumb_metacarpals" />
             <axis xyz="0 1 0" />
