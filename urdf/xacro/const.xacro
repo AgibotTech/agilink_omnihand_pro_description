@@ -209,247 +209,244 @@
 
     <!-- dynamics inertial value -->
     <!-- hand_base_link -->
-    <xacro:property name="hand_base_link_mass" value="0.151587951613317" />
-    <xacro:property name="hand_base_link_com_x" value="0.0104501163238095" />
-    <xacro:property name="hand_base_link_com_y" value="0.0118888084503467" />
-    <xacro:property name="hand_base_link_com_z" value="0.0911439272214151" />
-    <xacro:property name="hand_base_link_ixx" value="0.000644180864971572" />
-    <xacro:property name="hand_base_link_ixy" value="-0.000129017541581162" />
-    <xacro:property name="hand_base_link_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="hand_base_link_iyy" value="0.000602189392106759" />
-    <xacro:property name="hand_base_link_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="hand_base_link_izz" value="0.000390588400249176" />  
-
-    <!-- base1 -->
-    <xacro:property name="thumb_metacarpals_base1_mass" value="0.151587951613317" />
-    <xacro:property name="thumb_metacarpals_base1_com_x" value="0.0179711728098747" />
-    <xacro:property name="thumb_metacarpals_base1_com_y" value="-0.00867792602359619" />
-    <xacro:property name="thumb_metacarpals_base1_com_z" value="0.048086405378414" />
-    <xacro:property name="thumb_metacarpals_base1_ixx" value="0.000691300446234557" />
-    <xacro:property name="thumb_metacarpals_base1_ixy" value="-0.000147838502530715" />
-    <xacro:property name="thumb_metacarpals_base1_ixz" value="4.75996240531862E-05" />
-    <xacro:property name="thumb_metacarpals_base1_iyy" value="0.000610659102447108" />
-    <xacro:property name="thumb_metacarpals_base1_iyz" value="5.18177902703867E-05" />
-    <xacro:property name="thumb_metacarpals_base1_izz" value="0.000429238271301054" />
-
-    <!-- base2 -->
-    <xacro:property name="thumb_metacarpals_base2_mass" value="0.151587951613317" />
-    <xacro:property name="thumb_metacarpals_base2_com_x" value="-0.0299137341618413" />
-    <xacro:property name="thumb_metacarpals_base2_com_y" value="-0.00553949013213488" />
-    <xacro:property name="thumb_metacarpals_base2_com_z" value="0.0437003819413317" />
-    <xacro:property name="thumb_metacarpals_base2_ixx" value="0.000473885924623665" />
-    <xacro:property name="thumb_metacarpals_base2_ixy" value="-5.98183120965574E-05" />
-    <xacro:property name="thumb_metacarpals_base2_ixz" value="6.86948008054913E-05" />
-    <xacro:property name="thumb_metacarpals_base2_iyy" value="0.000785715338035627" />
-    <xacro:property name="thumb_metacarpals_base2_iyz" value="6.22342898788272E-05" />
-    <xacro:property name="thumb_metacarpals_base2_izz" value="0.000471596557323427" />
+    <xacro:property name="hand_base_link_mass" value="0.114811257443678" />
+    <xacro:property name="hand_base_link_com_x" value="-0.00161159551039664" />
+    <xacro:property name="hand_base_link_com_y" value="-5.35320731301112E-05" />
+    <xacro:property name="hand_base_link_com_z" value="0.0560978412942799" />
+    <xacro:property name="hand_base_link_ixx" value="0.000157668014286336" />
+    <xacro:property name="hand_base_link_ixy" value="1.23279816628469E-07" />
+    <xacro:property name="hand_base_link_ixz" value="3.41927928857369E-06" />
+    <xacro:property name="hand_base_link_iyy" value="8.5350303174068E-05" />
+    <xacro:property name="hand_base_link_iyz" value="-3.29579297268573E-06" />
+    <xacro:property name="hand_base_link_izz" value="8.65455243809675E-05" />
+    
+    <!-- thumb_metacarpals_base1 -->
+    <xacro:property name="thumb_metacarpals_base1_mass" value="0.00393646374828629" />
+    <xacro:property name="thumb_metacarpals_base1_com_x" value="0.0128313930736693" />
+    <xacro:property name="thumb_metacarpals_base1_com_y" value="-0.000678732032779711" />
+    <xacro:property name="thumb_metacarpals_base1_com_z" value="-6.35818794832849E-05" />
+    <xacro:property name="thumb_metacarpals_base1_ixx" value="5.66342021103653E-07" />
+    <xacro:property name="thumb_metacarpals_base1_ixy" value="2.99828694401975E-08" />
+    <xacro:property name="thumb_metacarpals_base1_ixz" value="-8.5308152999029E-10" />
+    <xacro:property name="thumb_metacarpals_base1_iyy" value="2.92953553344946E-07" />
+    <xacro:property name="thumb_metacarpals_base1_iyz" value="1.9125859446091E-08" />
+    <xacro:property name="thumb_metacarpals_base1_izz" value="6.19998879375208E-07" />
+    
+    <!-- thumb_metacarpals_base2 -->
+    <xacro:property name="thumb_metacarpals_base2_mass" value="0.00171679583795965" />
+    <xacro:property name="thumb_metacarpals_base2_com_x" value="0.00581591430824001" />
+    <xacro:property name="thumb_metacarpals_base2_com_y" value="0.00635157624424623" />
+    <xacro:property name="thumb_metacarpals_base2_com_z" value="0.0030181797779424" />
+    <xacro:property name="thumb_metacarpals_base2_ixx" value="1.18471956476211E-07" />
+    <xacro:property name="thumb_metacarpals_base2_ixy" value="-4.21491727713665E-08" />
+    <xacro:property name="thumb_metacarpals_base2_ixz" value="-1.05144206441241E-08" />
+    <xacro:property name="thumb_metacarpals_base2_iyy" value="1.14929858642022E-07" />
+    <xacro:property name="thumb_metacarpals_base2_iyz" value="-1.74178188232578E-08" />
+    <xacro:property name="thumb_metacarpals_base2_izz" value="9.67476477234771E-08" />
 
     <!-- thumb_metacarpals -->
-    <xacro:property name="thumb_metacarpals_mass" value="0.151587951613317" />
-    <xacro:property name="thumb_metacarpals_com_x" value="-0.0238023477162052" />
-    <xacro:property name="thumb_metacarpals_com_y" value="-0.00555699895038681" />
-    <xacro:property name="thumb_metacarpals_com_z" value="0.0634221437372272" />
-    <xacro:property name="thumb_metacarpals_ixx" value="0.0005387589265659" />
-    <xacro:property name="thumb_metacarpals_ixy" value="-1.10898491455715E-05" />
-    <xacro:property name="thumb_metacarpals_ixz" value="1.90250137291452E-05" />
-    <xacro:property name="thumb_metacarpals_iyy" value="0.000785715338035627" />
-    <xacro:property name="thumb_metacarpals_iyz" value="8.56057973780488E-05" />
-    <xacro:property name="thumb_metacarpals_izz" value="0.000406723555381193" />
-
-    <!--thumb_proximal -->
-    <xacro:property name="thumb_proximal_mass" value="0.151587951613317" />
-    <xacro:property name="thumb_proximal_com_x" value="-0.0795071744348793" />
-    <xacro:property name="thumb_proximal_com_y" value="-0.00550699964128246" />
-    <xacro:property name="thumb_proximal_com_z" value="0.0557562332056865" />
-    <xacro:property name="thumb_proximal_ixx" value="0.0005387589265659" />
-    <xacro:property name="thumb_proximal_ixy" value="-1.10898491455714E-05" />
-    <xacro:property name="thumb_proximal_ixz" value="1.90250137291452E-05" />
-    <xacro:property name="thumb_proximal_iyy" value="0.000785715338035627" />
-    <xacro:property name="thumb_proximal_iyz" value="8.56057973780487E-05" />
-    <xacro:property name="thumb_proximal_izz" value="0.000406723555381193" />
+    <xacro:property name="thumb_metacarpals_mass" value="0.0170904824194818" />
+    <xacro:property name="thumb_metacarpals_com_x" value="0.00385872987613253" />
+    <xacro:property name="thumb_metacarpals_com_y" value="0.000181218415040837" />
+    <xacro:property name="thumb_metacarpals_com_z" value="0.0262735842223975" />
+    <xacro:property name="thumb_metacarpals_ixx" value="6.63118248451921E-06" />
+    <xacro:property name="thumb_metacarpals_ixy" value="-8.89148786987225E-09" />
+    <xacro:property name="thumb_metacarpals_ixz" value="-3.40233793822337E-07" />
+    <xacro:property name="thumb_metacarpals_iyy" value="8.03870891218123E-06" />
+    <xacro:property name="thumb_metacarpals_iyz" value="1.37099535870765E-08" />
+    <xacro:property name="thumb_metacarpals_izz" value="1.83070429843817E-06" />
+    
+    <!-- thumb_proximal -->
+    <xacro:property name="thumb_proximal_mass" value="0.00522967724458737" />
+    <xacro:property name="thumb_proximal_com_x" value="-0.00245377652568594" />
+    <xacro:property name="thumb_proximal_com_y" value="0.00186599902568424" />
+    <xacro:property name="thumb_proximal_com_z" value="0.0134436674550769" />
+    <xacro:property name="thumb_proximal_ixx" value="4.48792018896274E-07" />
+    <xacro:property name="thumb_proximal_ixy" value="-9.70789943838585E-10" />
+    <xacro:property name="thumb_proximal_ixz" value="-7.98090430081374E-08" />
+    <xacro:property name="thumb_proximal_iyy" value="6.21158736091837E-07" />
+    <xacro:property name="thumb_proximal_iyz" value="-3.64664957781825E-09" />
+    <xacro:property name="thumb_proximal_izz" value="2.2512440353929E-07" />
 
     <!-- thumb_distal -->
-    <xacro:property name="thumb_distal_mass" value="0.151587951613317" />
-    <xacro:property name="thumb_distal_com_x" value="-0.114059462921926" />
-    <xacro:property name="thumb_distal_com_y" value="-0.00605699965383225" />
-    <xacro:property name="thumb_distal_com_z" value="0.0566053654962442" />
-    <xacro:property name="thumb_distal_ixx" value="0.0005387589265659" />
-    <xacro:property name="thumb_distal_ixy" value="-1.10898491455714E-05" />
-    <xacro:property name="thumb_distal_ixz" value="1.90250137291452E-05" />
-    <xacro:property name="thumb_distal_iyy" value="0.000785715338035627" />
-    <xacro:property name="thumb_distal_iyz" value="8.56057973780487E-05" />
-    <xacro:property name="thumb_distal_izz" value="0.000406723555381193" />
-
+    <xacro:property name="thumb_distal_mass" value="0.00521800975168049" />
+    <xacro:property name="thumb_distal_com_x" value="0.000428123853169746" />
+    <xacro:property name="thumb_distal_com_y" value="2.07014406468898E-05" />
+    <xacro:property name="thumb_distal_com_z" value="0.00928509405558531" />
+    <xacro:property name="thumb_distal_ixx" value="3.59710358459503E-07" />
+    <xacro:property name="thumb_distal_ixy" value="-7.03000203960055E-11" />
+    <xacro:property name="thumb_distal_ixz" value="7.69465079824501E-08" />
+    <xacro:property name="thumb_distal_iyy" value="3.45473494359169E-07" />
+    <xacro:property name="thumb_distal_iyz" value="3.06962101858862E-10" />
+    <xacro:property name="thumb_distal_izz" value="2.64028535580618E-07" />
 
     <!-- index_metacarpals -->
-    <xacro:property name="index_metacarpals_mass" value="0.15159" />
-    <xacro:property name="index_metacarpals_com_x" value="0.02075" />
-    <xacro:property name="index_metacarpals_com_y" value="-0.01889" />
-    <xacro:property name="index_metacarpals_com_z" value="-0.028209" />
-    <xacro:property name="index_metacarpals_ixx" value="0.00064418" />
-    <xacro:property name="index_metacarpals_ixy" value="-0.00012902" />
-    <xacro:property name="index_metacarpals_ixz" value="1.8034E-05" />
-    <xacro:property name="index_metacarpals_iyy" value="0.00060219" />
-    <xacro:property name="index_metacarpals_iyz" value="2.0056E-05" />
-    <xacro:property name="index_metacarpals_izz" value="0.00039059" />
-
+    <xacro:property name="index_metacarpals_mass" value="0.00107972483821526" />
+    <xacro:property name="index_metacarpals_com_x" value="0.00148754096391645" />
+    <xacro:property name="index_metacarpals_com_y" value="-5.49503463911916E-09" />
+    <xacro:property name="index_metacarpals_com_z" value="0.0020193309982513" />
+    <xacro:property name="index_metacarpals_ixx" value="3.55597226363628E-08" />
+    <xacro:property name="index_metacarpals_ixy" value="-9.48374824931894E-16" />
+    <xacro:property name="index_metacarpals_ixz" value="-2.89707226372672E-09" />
+    <xacro:property name="index_metacarpals_iyy" value="2.11264180987165E-08" />
+    <xacro:property name="index_metacarpals_iyz" value="-1.72178782545344E-14" />
+    <xacro:property name="index_metacarpals_izz" value="3.62864110573929E-08" />
+ 
     <!-- index_proximal -->
-    <xacro:property name="index_proximal_mass" value="0.15159" />
-    <xacro:property name="index_proximal_com_x" value="0.01028" />
-    <xacro:property name="index_proximal_com_y" value="-0.01889" />
-    <xacro:property name="index_proximal_com_z" value="-0.028209" />
-    <xacro:property name="index_proximal_ixx" value="0.00064418" />
-    <xacro:property name="index_proximal_ixy" value="-0.00012902" />
-    <xacro:property name="index_proximal_ixz" value="1.8034E-05" />
-    <xacro:property name="index_proximal_iyy" value="0.00060219" />
-    <xacro:property name="index_proximal_iyz" value="2.0056E-05" />
-    <xacro:property name="index_proximal_izz" value="0.00039059" />
+    <xacro:property name="index_proximal_mass" value="0.0047795679529425" />
+    <xacro:property name="index_proximal_com_x" value="-0.0011507020809311" />
+    <xacro:property name="index_proximal_com_y" value="-2.08334184405266E-05" />
+    <xacro:property name="index_proximal_com_z" value="0.0212647300382613" />
+    <xacro:property name="index_proximal_ixx" value="5.44832577804325E-07" />
+    <xacro:property name="index_proximal_ixy" value="-9.05372082062046E-11" />
+    <xacro:property name="index_proximal_ixz" value="1.65895588180974E-08" />
+    <xacro:property name="index_proximal_iyy" value="5.41640689587984E-07" />
+    <xacro:property name="index_proximal_iyz" value="-2.49910298343712E-10" />
+    <xacro:property name="index_proximal_izz" value="1.75594690124638E-07" />
 
-    <!--index_middle-->
-    <xacro:property name="index_middle_mass" value="0.151587951613317" />
-    <xacro:property name="index_middle_com_x" value="0.014217426718803" />
-    <xacro:property name="index_middle_com_y" value="-0.0188895458147162" />
-    <xacro:property name="index_middle_com_z" value="-0.0680381389982624" />
-    <xacro:property name="index_middle_ixx" value="0.000644180864971572" />
-    <xacro:property name="index_middle_ixy" value="-0.000129017541581162" />
-    <xacro:property name="index_middle_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="index_middle_iyy" value="0.000602189392106759" />
-    <xacro:property name="index_middle_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="index_middle_izz" value="0.000390588400249176" />
-    
+    <!-- index_middle -->
+    <xacro:property name="index_middle_mass"  value="0.00270775195657711" />
+    <xacro:property name="index_middle_com_x" value="0.000582798950647259" />
+    <xacro:property name="index_middle_com_y" value="-1.66623930000845E-05" />
+    <xacro:property name="index_middle_com_z" value="0.0134419047168478" />
+    <xacro:property name="index_middle_ixx" value="2.25567812011315E-07" />
+    <xacro:property name="index_middle_ixy" value="4.76559542406049E-12" />
+    <xacro:property name="index_middle_ixz" value="5.19477924230877E-09" />
+    <xacro:property name="index_middle_iyy" value="1.61875481956388E-07" />
+    <xacro:property name="index_middle_iyz" value="-8.958112771538E-12" />
+    <xacro:property name="index_middle_izz" value="1.1790038033522E-07" />
+
     <!-- index_distal -->
-    <xacro:property name="index_distal_mass" value="0.151587951613317" />
-    <xacro:property name="index_distal_com_x" value="0.00842935377456233" />
-    <xacro:property name="index_distal_com_y" value="-0.0188895458135187" />
-    <xacro:property name="index_distal_com_z" value="-0.0945298492411312" />
-    <xacro:property name="index_distal_ixx" value="0.000644180864971572" />
-    <xacro:property name="index_distal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="index_distal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="index_distal_iyy" value="0.000602189392106759" />
-    <xacro:property name="index_distal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="index_distal_izz" value="0.000390588400249176" />
-
+    <xacro:property name="index_distal_mass" value="0.00258259704107596" />
+    <xacro:property name="index_distal_com_x" value="-0.00721640324456499" />
+    <xacro:property name="index_distal_com_y" value="-3.10526118675776E-05" />
+    <xacro:property name="index_distal_com_z" value="0.00510323974876059" />
+    <xacro:property name="index_distal_ixx" value="1.30227806624487E-07" />
+    <xacro:property name="index_distal_ixy" value="1.19687371568575E-10" />
+    <xacro:property name="index_distal_ixz" value="4.12783102703161E-08" />
+    <xacro:property name="index_distal_iyy" value="1.36472647538679E-07" />
+    <xacro:property name="index_distal_iyz" value="-3.14466372715903E-10" />
+    <xacro:property name="index_distal_izz" value="1.01017185875891E-07" />
 
     <!-- middle_metacarpals -->
-    <xacro:property name="middle_metacarpals_mass" value="0.151587951613317" />
-    <xacro:property name="middle_metacarpals_com_x" value="0.0207501163336748" />
-    <xacro:property name="middle_metacarpals_com_y" value="0.00522812957210687" />
-    <xacro:property name="middle_metacarpals_com_z" value="-0.02820855852139" />
-    <xacro:property name="middle_metacarpals_ixx" value="0.000644180864971572" />
-    <xacro:property name="middle_metacarpals_ixy" value="-0.000129017541581162" />
-    <xacro:property name="middle_metacarpals_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="middle_metacarpals_iyy" value="0.000602189392106759" />
-    <xacro:property name="middle_metacarpals_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="middle_metacarpals_izz" value="0.000390588400249176" />
+    <xacro:property name="middle_metacarpals_mass"  value="0.00107972484789827" />
+    <xacro:property name="middle_metacarpals_com_x" value="0.00148754096057072" />
+    <xacro:property name="middle_metacarpals_com_y" value="3.28886513297454E-06" />
+    <xacro:property name="middle_metacarpals_com_z" value="0.00201932832117667" />
+    <xacro:property name="middle_metacarpals_ixx"   value="3.55597227804492E-08" />
+    <xacro:property name="middle_metacarpals_ixy"   value="-4.72744773072463E-12" />
+    <xacro:property name="middle_metacarpals_ixz"   value="-2.89706838785042E-09" />
+    <xacro:property name="middle_metacarpals_iyy"   value="2.11264584194102E-08" />
+    <xacro:property name="middle_metacarpals_iyz"   value="2.47147540874508E-11" />
+    <xacro:property name="middle_metacarpals_izz"   value="3.62863711473445E-08" />
 
     <!-- middle_proximal -->
-    <xacro:property name="middle_proximal_mass" value="0.151587951613317" />
-    <xacro:property name="middle_proximal_com_x" value="0.0102803180643118" />
-    <xacro:property name="middle_proximal_com_y" value="0.00522812960503458" />
-    <xacro:property name="middle_proximal_com_z" value="-0.0281858557487877" />
-    <xacro:property name="middle_proximal_ixx" value="0.000644180864971572" />
-    <xacro:property name="middle_proximal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="middle_proximal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="middle_proximal_iyy" value="0.000602189392106759" />
-    <xacro:property name="middle_proximal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="middle_proximal_izz" value="0.000390588400249176" />
+    <xacro:property name="middle_proximal_mass"     value="0.0055122415444485" />
+    <xacro:property name="middle_proximal_com_x"    value="-0.00165985032192234" />
+    <xacro:property name="middle_proximal_com_y"    value="6.30950482594017E-05" />
+    <xacro:property name="middle_proximal_com_z"    value="0.0236220231228174" />
+    <xacro:property name="middle_proximal_ixx"      value="7.79066281858944E-07" />
+    <xacro:property name="middle_proximal_ixy"      value="4.80058757068528E-11" />
+    <xacro:property name="middle_proximal_ixz"      value="3.22743653411331E-08" />
+    <xacro:property name="middle_proximal_iyy"      value="7.60600012773068E-07" />
+    <xacro:property name="middle_proximal_iyz"      value="-1.49750195774983E-09" />
+    <xacro:property name="middle_proximal_izz"      value="2.05882994190045E-07" />
 
-    <!--middle_middle-->
-    <xacro:property name="middle_middle_mass" value="0.151587951613317" />
-    <xacro:property name="middle_middle_com_x" value="0.014476258618341" />
-    <xacro:property name="middle_middle_com_y" value="0.00522806364343179" />
-    <xacro:property name="middle_middle_com_z" value="-0.0730314350504594" />
-    <xacro:property name="middle_middle_ixx" value="0.000644180864971572" />
-    <xacro:property name="middle_middle_ixy" value="-0.000129017541581162" />
-    <xacro:property name="middle_middle_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="middle_middle_iyy" value="0.000602189392106759" />
-    <xacro:property name="middle_middle_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="middle_middle_izz" value="0.000390588400249176" />
+    <!-- middle_middle -->
+    <xacro:property name="middle_middle_mass"       value="0.00314204808883818" />
+    <xacro:property name="middle_middle_com_x"      value="-0.000230368247225323" />
+    <xacro:property name="middle_middle_com_y"      value="5.52667321999743E-05" />
+    <xacro:property name="middle_middle_com_z"      value="0.01619749717231" />
+    <xacro:property name="middle_middle_ixx"        value="3.20092678111392E-07" />
+    <xacro:property name="middle_middle_ixy"        value="-1.08641100687577E-11" />
+    <xacro:property name="middle_middle_ixz"        value="1.53074298945201E-08" />
+    <xacro:property name="middle_middle_iyy"        value="2.47015765909473E-07" />
+    <xacro:property name="middle_middle_iyz"        value="-1.53970978537133E-10" />
+    <xacro:property name="middle_middle_izz"        value="1.35843361683385E-07" />
+
+    <!-- middle_distal -->
+    <xacro:property name="middle_distal_mass"       value="0.00258260294313138" />
+    <xacro:property name="middle_distal_com_x"      value="-0.00724758468028898" />
+    <xacro:property name="middle_distal_com_y"      value="-2.27990144281735E-05" />
+    <xacro:property name="middle_distal_com_z"      value="0.00505893372906674" />
+    <xacro:property name="middle_distal_ixx"        value="1.29720848656837E-07" />
+    <xacro:property name="middle_distal_ixy"        value="1.8924389897908E-10" />
+    <xacro:property name="middle_distal_ixz"        value="4.14544297269987E-08" />
+    <xacro:property name="middle_distal_iyy"        value="1.36472188916914E-07" />
+    <xacro:property name="middle_distal_iyz"        value="-3.70737066885826E-10" />
+    <xacro:property name="middle_distal_izz"        value="1.01526072268206E-07" />
     
-    <!-- index_distal -->
-    <xacro:property name="middle_distal_mass" value="0.151587951613317" />
-    <xacro:property name="middle_distal_com_x" value="0.0108833212109301" />
-    <xacro:property name="middle_distal_com_y" value="0.00521482574062102" />
-    <xacro:property name="middle_distal_com_z" value="-0.10464793705227" />
-    <xacro:property name="middle_distal_ixx" value="0.000644180864971572" />
-    <xacro:property name="middle_distal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="middle_distal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="middle_distal_iyy" value="0.000602189392106759" />
-    <xacro:property name="middle_distal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="middle_distal_izz" value="0.000390588400249176" />
-
     <!-- ring_proximal -->
-    <xacro:property name="ring_proximal_mass" value="0.151587951613317" />
-    <xacro:property name="ring_proximal_com_x" value="0.0102903137118148" />
-    <xacro:property name="ring_proximal_com_y" value="0.0254482598695459" />
-    <xacro:property name="ring_proximal_com_z" value="-0.0285690669705761" />
-    <xacro:property name="ring_proximal_ixx" value="0.000644180864971572" />
-    <xacro:property name="ring_proximal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="ring_proximal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="ring_proximal_iyy" value="0.000602189392106759" />
-    <xacro:property name="ring_proximal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="ring_proximal_izz" value="0.000390588400249176" />
+    <xacro:property name="ring_proximal_mass"  value="0.0047795328266326" />
+    <xacro:property name="ring_proximal_com_x" value="-0.00161802170047008" />
+    <xacro:property name="ring_proximal_com_y" value="-2.08220096852268E-05" />
+    <xacro:property name="ring_proximal_com_z" value="0.0212342177709951" />
+    <xacro:property name="ring_proximal_ixx"   value="5.43923252152409E-07" />
+    <xacro:property name="ring_proximal_ixy"   value="-8.48896522637981E-11" />
+    <xacro:property name="ring_proximal_ixz"   value="2.4689478865027E-08" />
+    <xacro:property name="ring_proximal_iyy"   value="5.41640127982143E-07" />
+    <xacro:property name="ring_proximal_iyz"   value="-2.5218290048469E-10" />
+    <xacro:property name="ring_proximal_izz"   value="1.76501748993068E-07" />
 
     <!-- ring_middle -->
-    <xacro:property name="ring_middle_mass" value="0.151587951613317" />
-    <xacro:property name="ring_middle_com_x" value="0.0142198176679998" />
-    <xacro:property name="ring_middle_com_y" value="0.0254482598757582" />
-    <xacro:property name="ring_middle_com_z" value="-0.0683994109140526" />
-    <xacro:property name="ring_middle_ixx" value="0.000644180864971572" />
-    <xacro:property name="ring_middle_ixy" value="-0.000129017541581162" />
-    <xacro:property name="ring_middle_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="ring_middle_iyy" value="0.000602189392106759" />
-    <xacro:property name="ring_middle_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="ring_middle_izz" value="0.000390588400249176" />
+    <xacro:property name="ring_middle_mass"  value="0.0027077533496335" />
+    <xacro:property name="ring_middle_com_x" value="0.000940340714750308" />
+    <xacro:property name="ring_middle_com_y" value="-1.66667751162405E-05" />
+    <xacro:property name="ring_middle_com_z" value="0.0134216382614548" />
+    <xacro:property name="ring_middle_ixx"   value="2.25767846748625E-07" />
+    <xacro:property name="ring_middle_ixy"   value="4.61360531413437E-12" />
+    <xacro:property name="ring_middle_ixz"   value="2.32301202429608E-09" />
+    <xacro:property name="ring_middle_iyy"   value="1.61875511170868E-07" />
+    <xacro:property name="ring_middle_iyz"   value="-9.05860342855209E-12" />
+    <xacro:property name="ring_middle_izz"   value="1.17700137222491E-07" />
 
     <!-- ring_distal -->
-    <xacro:property name="ring_distal_mass" value="0.151587951613317" />
-    <xacro:property name="ring_distal_com_x" value="0.00715978366677102" />
-    <xacro:property name="ring_distal_com_y" value="0.0254482598785948" />
-    <xacro:property name="ring_distal_com_z" value="-0.0945808627435729" />
-    <xacro:property name="ring_distal_ixx" value="0.000644180864971572" />
-    <xacro:property name="ring_distal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="ring_distal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="ring_distal_iyy" value="0.000602189392106759" />
-    <xacro:property name="ring_distal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="ring_distal_izz" value="0.000390588400249176" />
-
+    <xacro:property name="ring_distal_mass"  value="0.00258259127175773" />
+    <xacro:property name="ring_distal_com_x" value="-0.00679183129010172" />
+    <xacro:property name="ring_distal_com_y" value="-3.1051267307786E-05" />
+    <xacro:property name="ring_distal_com_z" value="0.00565592901618503" />
+    <xacro:property name="ring_distal_ixx"   value="1.36530380213342E-07" />
+    <xacro:property name="ring_distal_ixy"   value="9.44469863763946E-11" />
+    <xacro:property name="ring_distal_ixz"   value="3.84707548646242E-08" />
+    <xacro:property name="ring_distal_iyy"   value="1.36471612117152E-07" />
+    <xacro:property name="ring_distal_iyz"   value="-3.22664356287902E-10" />
+    <xacro:property name="ring_distal_izz"   value="9.47134934031493E-08" />
+    
     <!-- pinky_proximal -->
-    <xacro:property name="pinky_proximal_mass" value="0.151587951613317" />
-    <xacro:property name="pinky_proximal_com_x" value="0.0102903137118148" />
-    <xacro:property name="pinky_proximal_com_y" value="0.0455059352570293" />
-    <xacro:property name="pinky_proximal_com_z" value="-0.0215690669677058" />
-    <xacro:property name="pinky_proximal_ixx" value="0.000644180864971572" />
-    <xacro:property name="pinky_proximal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="pinky_proximal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="pinky_proximal_iyy" value="0.000602189392106759" />
-    <xacro:property name="pinky_proximal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="pinky_proximal_izz" value="0.000390588400249176" />
+    <xacro:property name="pinky_proximal_mass"  value="0.00477953323340541" />
+    <xacro:property name="pinky_proximal_com_x" value="-0.0016180221168521" />
+    <xacro:property name="pinky_proximal_com_y" value="-2.08215074695289E-05" />
+    <xacro:property name="pinky_proximal_com_z" value="0.0212342179851402" />
+    <xacro:property name="pinky_proximal_ixx"   value="5.43923274544673E-07" />
+    <xacro:property name="pinky_proximal_ixy"   value="-8.48863445397533E-11" />
+    <xacro:property name="pinky_proximal_ixz"   value="2.46894910332365E-08" />
+    <xacro:property name="pinky_proximal_iyy"   value="5.41640168354855E-07" />
+    <xacro:property name="pinky_proximal_iyz"   value="-2.52187730642466E-10" />
+    <xacro:property name="pinky_proximal_izz"   value="1.7650175778066E-07" />
 
     <!-- pinky_middle -->
-    <xacro:property name="pinky_middle_mass" value="0.151587951613317" />
-    <xacro:property name="pinky_middle_com_x" value="0.0142198176679998" />
-    <xacro:property name="pinky_middle_com_y" value="0.0455059352629921" />
-    <xacro:property name="pinky_middle_com_z" value="-0.061399410909506" />
-    <xacro:property name="pinky_middle_ixx" value="0.000644180864971572" />
-    <xacro:property name="pinky_middle_ixy" value="-0.000129017541581162" />
-    <xacro:property name="pinky_middle_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="pinky_middle_iyy" value="0.000602189392106759" />
-    <xacro:property name="pinky_middle_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="pinky_middle_izz" value="0.000390588400249176" />
+    <xacro:property name="pinky_middle_mass"  value="0.00270775345292578" />
+    <xacro:property name="pinky_middle_com_x" value="0.000940340979638598" />
+    <xacro:property name="pinky_middle_com_y" value="-1.66665156724755E-05" />
+    <xacro:property name="pinky_middle_com_z" value="0.0134216381434371" />
+    <xacro:property name="pinky_middle_ixx"   value="2.25767855959524E-07" />
+    <xacro:property name="pinky_middle_ixy"   value="4.61316580602277E-12" />
+    <xacro:property name="pinky_middle_ixz"   value="2.32301150942084E-09" />
+    <xacro:property name="pinky_middle_iyy"   value="1.61875516933061E-07" />
+    <xacro:property name="pinky_middle_iyz"   value="-9.05509549786009E-12" />
+    <xacro:property name="pinky_middle_izz"   value="1.17700140839825E-07" />
 
     <!-- pinky_distal -->
-    <xacro:property name="pinky_distal_mass" value="0.151587951613317" />
-    <xacro:property name="pinky_distal_com_x" value="0.00715978366677102" />
-    <xacro:property name="pinky_distal_com_y" value="0.0455059352658286" />
-    <xacro:property name="pinky_distal_com_z" value="-0.0875808627081838" />
-    <xacro:property name="pinky_distal_ixx" value="0.000644180864971572" />
-    <xacro:property name="pinky_distal_ixy" value="-0.000129017541581162" />
-    <xacro:property name="pinky_distal_ixz" value="1.80343765136999E-05" />
-    <xacro:property name="pinky_distal_iyy" value="0.000602189392106759" />
-    <xacro:property name="pinky_distal_iyz" value="2.00560188388541E-05" />
-    <xacro:property name="pinky_distal_izz" value="0.000390588400249176" />
-
+    <xacro:property name="pinky_distal_mass"  value="0.00258259141809727" />
+    <xacro:property name="pinky_distal_com_x" value="-0.00679190409450586" />
+    <xacro:property name="pinky_distal_com_y" value="-3.10511081597076E-05" />
+    <xacro:property name="pinky_distal_com_z" value="0.00565584201307923" />
+    <xacro:property name="pinky_distal_ixx"   value="1.36529403216541E-07" />
+    <xacro:property name="pinky_distal_ixy"   value="9.44507918542087E-11" />
+    <xacro:property name="pinky_distal_ixz"   value="3.84712982116646E-08" />
+    <xacro:property name="pinky_distal_iyy"   value="1.36471628325979E-07" />
+    <xacro:property name="pinky_distal_iyz"   value="-3.22662637208023E-10" />
+    <xacro:property name="pinky_distal_izz"   value="9.47144825482917E-08" />
 
     <!-- mimic joint -->
     <xacro:property name="thumb_dip_multiplier" value="0.7999" />

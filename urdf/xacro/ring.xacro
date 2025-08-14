@@ -4,26 +4,29 @@
 
     <xacro:macro name="ring" params="name mirror mirror_mesh *origin">
         <!-- ring  -->
+
         <link name="${name}_ring_proximal">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_proximal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_proximal.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_proximal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
-                    xyz="${ring_proximal_com_x} ${ring_proximal_com_y} ${ring_proximal_com_z}" />
+                    xyz="${ring_proximal_com_x} ${ring_proximal_com_y*mirror} ${ring_proximal_com_z}" />
                 <mass value="${ring_proximal_mass}" />
                 <inertia
-                    ixx="${ring_proximal_ixx}" ixy="${ring_proximal_ixy}" ixz="${ring_proximal_ixz}"
-                    iyy="${ring_proximal_iyy}" iyz="${ring_proximal_iyz}" izz="${ring_proximal_izz}" />
+                    ixx="${ring_proximal_ixx}" ixy="${ring_proximal_ixy*mirror}" 
+                    ixz="${ring_proximal_ixz}"
+                    iyy="${ring_proximal_iyy}" iyz="${ring_proximal_iyz*mirror}" 
+                    izz="${ring_proximal_izz}" />
             </inertial>
             <collision>
                 <origin rpy="0 0 0" xyz="${ring_proximal_collision_x} ${ring_proximal_collision_y} ${ring_proximal_collision_z}" />
@@ -47,21 +50,23 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_middle.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_middle.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_middle.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_middle.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
-                    xyz="${ring_middle_com_x} ${ring_middle_com_y} ${ring_middle_com_z}" />
+                    xyz="${ring_middle_com_x} ${ring_middle_com_y*mirror} ${ring_middle_com_z}" />
                 <mass value="${ring_proximal_mass}" />
                 <inertia
-                    ixx="${ring_middle_ixx}" ixy="${ring_middle_ixy}" ixz="${ring_middle_ixz}"
-                    iyy="${ring_middle_iyy}" iyz="${ring_middle_iyz}" izz="${ring_middle_izz}" />
+                    ixx="${ring_middle_ixx}" ixy="${ring_middle_ixy*mirror}" 
+                    ixz="${ring_middle_ixz}"
+                    iyy="${ring_middle_iyy}" iyz="${ring_middle_iyz*mirror}" 
+                    izz="${ring_middle_izz}" />
             </inertial>
             <collision>
                 <origin rpy="0 0 0" xyz="${ring_middle_collision_x} ${ring_middle_collision_y} ${ring_middle_collision_z}" />
@@ -89,22 +94,22 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_distal.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_distal.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="white" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
-                    xyz="${ring_distal_com_x} ${ring_distal_com_y} ${ring_distal_com_z}" />
+                    xyz="${ring_distal_com_x} ${ring_distal_com_y*mirror} ${ring_distal_com_z}" />
                 <mass value="${ring_distal_mass}" />
                 <inertia
-                    ixx="${ring_distal_ixx}" ixy="${ring_distal_ixy}"
+                    ixx="${ring_distal_ixx}" ixy="${ring_distal_ixy*mirror}"
                     ixz="${ring_distal_ixz}"
-                    iyy="${ring_distal_iyy}" iyz="${ring_distal_iyz}"
+                    iyy="${ring_distal_iyy}" iyz="${ring_distal_iyz*mirror}"
                     izz="${ring_distal_izz}" />
             </inertial>
             <collision>
@@ -133,10 +138,10 @@
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
                     <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_left_meshes/ring_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                     <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal_vertices_virtual_coordinates.STL" />
+                        <mesh filename="${mesh_path}/o12_t1_right_meshes/ring_distal_vertices_virtual_coordinates.STL" />
                     </xacro:if>
                 </geometry>
                 <material name="tips" />

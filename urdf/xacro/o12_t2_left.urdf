@@ -160,7 +160,7 @@
     </collision>
   </link>
   <joint name="L_thumb_pip_joint" type="revolute">
-    <origin rpy="0 0 0" xyz="0.00816453404663862 0.00144999989303646 0.0556339310817644"/>
+    <origin rpy="0 0 0" xyz="0.00816453404663862 -0.00144999989303646 0.0556339310817644"/>
     <parent link="L_thumb_metacarpals"/>
     <child link="L_thumb_proximal"/>
     <axis xyz="0 1 0"/>
