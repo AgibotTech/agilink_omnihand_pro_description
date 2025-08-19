@@ -110,7 +110,7 @@
     <parent link="R_thumb_metacarpals_base1"/>
     <child link="R_thumb_metacarpals_base2"/>
     <axis xyz="0 0 -1"/>
-    <limit effort="100" lower="0" upper="1.38" velocity="1"/>
+    <limit effort="100" lower="-1.38" upper="0" velocity="1"/>
   </joint>
   <link name="R_thumb_metacarpals">
     <visual>
@@ -137,7 +137,7 @@
     <parent link="R_thumb_metacarpals_base2"/>
     <child link="R_thumb_metacarpals"/>
     <axis xyz="0 1 0"/>
-    <limit effort="100" lower="0" upper="0.82" velocity="1"/>
+    <limit effort="100" lower="-0.82" upper="0" velocity="1"/>
   </joint>
   <link name="R_thumb_proximal">
     <visual>
@@ -164,7 +164,7 @@
     <parent link="R_thumb_metacarpals"/>
     <child link="R_thumb_proximal"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="0" upper="1.29" velocity="100"/>
+    <limit effort="1" lower="-1.29" upper="0" velocity="100"/>
   </joint>
   <link name="R_thumb_distal">
     <visual>
@@ -191,7 +191,7 @@
     <parent link="R_thumb_proximal"/>
     <child link="R_thumb_distal"/>
     <axis xyz="0 1 0"/>
-    <limit effort="100" lower="0" upper="1.37" velocity="1"/>
+    <limit effort="100" lower="-1.37" upper="0" velocity="1"/>
     <mimic joint="R_thumb_pip_joint" multiplier="0.7999" offset="0"/>
   </joint>
   <link name="R_thumb_distal_vertices_virtual_coordinates">

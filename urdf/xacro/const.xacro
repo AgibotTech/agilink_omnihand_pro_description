@@ -116,23 +116,23 @@
     <xacro:property name="thumb_roll_velocity_max" value="1" />
     <xacro:property name="thumb_roll_torque_max" value="100" />
 
-    <xacro:property name="thumb_abad_position_max" value="1.38" />
-    <xacro:property name="thumb_abad_position_min" value="0" />
+    <xacro:property name="thumb_abad_position_max" value="0" />
+    <xacro:property name="thumb_abad_position_min" value="-1.38" />
     <xacro:property name="thumb_abad_velocity_max" value="1" />
     <xacro:property name="thumb_abad_torque_max" value="100" />
 
-    <xacro:property name="thumb_mcp_position_max" value="0.82" />
-    <xacro:property name="thumb_mcp_position_min" value="0" />
+    <xacro:property name="thumb_mcp_position_max" value="0" />
+    <xacro:property name="thumb_mcp_position_min" value="-0.82" />
     <xacro:property name="thumb_mcp_velocity_max" value="1" />
     <xacro:property name="thumb_mcp_torque_max" value="100" />
 
-    <xacro:property name="thumb_pip_position_max" value="1.29" />
-    <xacro:property name="thumb_pip_position_min" value="0" />
+    <xacro:property name="thumb_pip_position_max" value="0" />
+    <xacro:property name="thumb_pip_position_min" value="-1.29" />
     <xacro:property name="thumb_pip_velocity_max" value="100" />
     <xacro:property name="thumb_pip_torque_max" value="1" />
 
-    <xacro:property name="thumb_dip_position_max" value="1.37" />
-    <xacro:property name="thumb_dip_position_min" value="0" />
+    <xacro:property name="thumb_dip_position_max" value="0" />
+    <xacro:property name="thumb_dip_position_min" value="-1.37" />
     <xacro:property name="thumb_dip_velocity_max" value="1" />
     <xacro:property name="thumb_dip_torque_max" value="100" />
 
