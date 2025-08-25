@@ -449,13 +449,13 @@
     <xacro:property name="pinky_distal_izz"   value="9.47144825482917E-08" />
 
     <!-- mimic joint -->
-    <xacro:property name="thumb_dip_multiplier" value="0.7999" />
-    <xacro:property name="index_dip_multiplier" value="1.1162" />
-    <xacro:property name="middle_dip_multiplier" value="1.1415" />
-    <xacro:property name="ring_pip_multiplier" value="0.8766" />
-    <xacro:property name="pinky_pip_multiplier" value="0.8766" />
-    <xacro:property name="ring_dip_multiplier" value="0.9695" />
-    <xacro:property name="pinky_dip_multiplier" value="0.9695" />
+    <xacro:property name="thumb_dip_multiplier" value="0.8068" />
+    <xacro:property name="index_dip_multiplier" value="1.0362" />
+    <xacro:property name="middle_dip_multiplier" value="1.0924" />
+    <xacro:property name="ring_pip_multiplier" value="0.877" />
+    <xacro:property name="pinky_pip_multiplier" value="0.877" />
+    <xacro:property name="ring_dip_multiplier" value="0.9394" />
+    <xacro:property name="pinky_dip_multiplier" value="0.9394" />
 
     <!-- collision parameters -->
     <xacro:property name="palm_collision_cylinder_z" value="0.005" />

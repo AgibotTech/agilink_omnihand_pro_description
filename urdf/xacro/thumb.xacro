@@ -84,7 +84,7 @@
                     rpy="${thumb_abad_r*mirror} ${thumb_abad_p} ${thumb_abad_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base1" />
             <child link="${name}_thumb_metacarpals_base2" />
-            <axis xyz="0 0 -1" />
+            <axis xyz="0 0 1" />
 
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
@@ -134,7 +134,7 @@
             <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}" rpy="${thumb_mcp_r*mirror} ${thumb_mcp_p} ${thumb_mcp_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base2" />
             <child link="${name}_thumb_metacarpals" />
-            <axis xyz="0 1 0" />
+            <axis xyz="0 -1 0" />
             <limit effort="${thumb_mcp_torque_max}" velocity="${thumb_mcp_velocity_max}"
                 lower="${thumb_mcp_position_min}" upper="${thumb_mcp_position_max}" />
         </joint>
@@ -173,7 +173,7 @@
             <origin xyz="${thumb_pip_x} ${thumb_pip_y} ${thumb_pip_z}" rpy="0 0 0" />
             <parent link="${name}_thumb_metacarpals" />
             <child link="${name}_thumb_proximal" />
-            <axis xyz="0 1 0" />
+            <axis xyz="0 -1 0" />
             <limit effort="${thumb_pip_torque_max}" velocity="${thumb_pip_velocity_max}"
                 lower="${thumb_pip_position_min}" upper="${thumb_pip_position_max}" />
         </joint>
@@ -214,7 +214,7 @@
             <origin xyz=" ${thumb_dip_x}  ${thumb_dip_y} ${thumb_dip_z}" rpy="0 0 0" />
             <parent link="${name}_thumb_proximal" />
             <child link="${name}_thumb_distal" />
-            <axis xyz="0 1 0" />
+            <axis xyz="0 -1 0" />
 
             <limit effort="${thumb_dip_torque_max}" velocity="${thumb_dip_velocity_max}"
                 lower="${thumb_dip_position_min}" upper="${thumb_dip_position_max}" />
