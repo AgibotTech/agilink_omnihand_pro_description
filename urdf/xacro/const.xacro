@@ -113,98 +113,98 @@
     <!-- joint limits -->
     <xacro:property name="thumb_roll_position_max" value="${54*pi/180.0}" />
     <xacro:property name="thumb_roll_position_min" value="0" />
-    <xacro:property name="thumb_roll_velocity_max" value="1" />
-    <xacro:property name="thumb_roll_torque_max" value="100" />
+    <xacro:property name="thumb_roll_velocity_max" value="2.38" />
+    <xacro:property name="thumb_roll_torque_max" value="0.134" />
 
     <xacro:property name="thumb_abad_position_max" value="0" />
     <xacro:property name="thumb_abad_position_min" value="${-79.5*pi/180.0}" />
-    <xacro:property name="thumb_abad_velocity_max" value="1" />
-    <xacro:property name="thumb_abad_torque_max" value="100" />
+    <xacro:property name="thumb_abad_velocity_max" value="2.33" />
+    <xacro:property name="thumb_abad_torque_max" value="0.317" />
 
     <xacro:property name="thumb_mcp_position_max" value="0" />
     <xacro:property name="thumb_mcp_position_min" value="${-47.4*pi/180.0}" />
-    <xacro:property name="thumb_mcp_velocity_max" value="1" />
-    <xacro:property name="thumb_mcp_torque_max" value="100" />
+    <xacro:property name="thumb_mcp_velocity_max" value="1.35" />
+    <xacro:property name="thumb_mcp_torque_max" value="0.800" />
 
     <xacro:property name="thumb_pip_position_max" value="0" />
     <xacro:property name="thumb_pip_position_min" value="${-74*pi/180.0}" />
-    <xacro:property name="thumb_pip_velocity_max" value="100" />
-    <xacro:property name="thumb_pip_torque_max" value="1" />
+    <xacro:property name="thumb_pip_velocity_max" value="1.87" />
+    <xacro:property name="thumb_pip_torque_max" value="0.920" />
 
     <xacro:property name="thumb_dip_position_max" value="0" />
     <xacro:property name="thumb_dip_position_min" value="${-79*pi/180.0}" />
-    <xacro:property name="thumb_dip_velocity_max" value="1" />
-    <xacro:property name="thumb_dip_torque_max" value="100" />
+    <xacro:property name="thumb_dip_velocity_max" value="1.9" />
+    <xacro:property name="thumb_dip_torque_max" value="0.920" />
 
     <xacro:property name="index_abad_position_max" value="${15*pi/180.0}" />
     <xacro:property name="index_abad_position_min" value="${-15*pi/180.0}" />
-    <xacro:property name="index_abad_velocity_max" value="0" />
-    <xacro:property name="index_abad_torque_max" value="0" />
+    <xacro:property name="index_abad_velocity_max" value="2.16" />
+    <xacro:property name="index_abad_torque_max" value="1.001" />
 
     <xacro:property name="index_mcp_position_max" value="${77.5*pi/180.0}" />
     <xacro:property name="index_mcp_position_min" value="0" />
-    <xacro:property name="index_mcp_velocity_max" value="1" />
-    <xacro:property name="index_mcp_torque_max" value="100" />
+    <xacro:property name="index_mcp_velocity_max" value="2.22" />
+    <xacro:property name="index_mcp_torque_max" value="0.420" />
 
     <xacro:property name="index_pip_position_max" value="${87.7*pi/180.0}" />
     <xacro:property name="index_pip_position_min" value="0" />
-    <xacro:property name="index_pip_velocity_max" value="1" />
-    <xacro:property name="index_pip_torque_max" value="100" />
+    <xacro:property name="index_pip_velocity_max" value="2.49" />
+    <xacro:property name="index_pip_torque_max" value="0.216" />
 
     <xacro:property name="index_dip_position_max" value="${78.5*pi/180.0}" />
     <xacro:property name="index_dip_position_min" value="0" />
-    <xacro:property name="index_dip_velocity_max" value="1" />
-    <xacro:property name="index_dip_torque_max" value="100" />
+    <xacro:property name="index_dip_velocity_max" value="2.85" />
+    <xacro:property name="index_dip_torque_max" value="0.216" />
 
     <xacro:property name="middle_abad_position_max" value="${15*pi/180.0}" />
     <xacro:property name="middle_abad_position_min" value="${-15*pi/180.0}" />
-    <xacro:property name="middle_abad_velocity_max" value="1" />
-    <xacro:property name="middle_abad_torque_max" value="100" />
+    <xacro:property name="middle_abad_velocity_max" value="2.16" />
+    <xacro:property name="middle_abad_torque_max" value="1.031" />
 
     <xacro:property name="middle_mcp_position_max" value="${77.8*pi/180.0}" />
     <xacro:property name="middle_mcp_position_min" value="0" />
-    <xacro:property name="middle_mcp_velocity_max" value="1" />
-    <xacro:property name="middle_mcp_torque_max" value="100" />
+    <xacro:property name="middle_mcp_velocity_max" value="2.22" />
+    <xacro:property name="middle_mcp_torque_max" value="0.413" />
 
     <xacro:property name="middle_pip_position_max" value="${104*pi/180.0}" />
     <xacro:property name="middle_pip_position_min" value="0" />
-    <xacro:property name="middle_pip_velocity_max" value="1" />
-    <xacro:property name="middle_pip_torque_max" value="100" />
+    <xacro:property name="middle_pip_velocity_max" value="2.16" />
+    <xacro:property name="middle_pip_torque_max" value="0.136" />
 
     <xacro:property name="middle_dip_position_max" value="${72*pi/180.0}" />
     <xacro:property name="middle_dip_position_min" value="0" />
-    <xacro:property name="middle_dip_velocity_max" value="1" />
-    <xacro:property name="middle_dip_torque_max" value="100" />
+    <xacro:property name="middle_dip_velocity_max" value="2.48" />
+    <xacro:property name="middle_dip_torque_max" value="0.136" />
 
     <xacro:property name="ring_mcp_position_max" value="${88*pi/180.0}" />
     <xacro:property name="ring_mcp_position_min" value="0" />
-    <xacro:property name="ring_mcp_velocity_max" value="1" />
-    <xacro:property name="ring_mcp_torque_max" value="100" />
+    <xacro:property name="ring_mcp_velocity_max" value="2.54" />
+    <xacro:property name="ring_mcp_torque_max" value="0.444" />
 
     <xacro:property name="ring_pip_position_max" value="${81*pi/180.0}" />
     <xacro:property name="ring_pip_position_min" value="0" />
-    <xacro:property name="ring_pip_velocity_max" value="1" />
-    <xacro:property name="ring_pip_torque_max" value="100" />
+    <xacro:property name="ring_pip_velocity_max" value="2.29" />
+    <xacro:property name="ring_pip_torque_max" value="0.444" />
 
     <xacro:property name="ring_dip_position_max" value="${79*pi/180.0}" />
     <xacro:property name="ring_dip_position_min" value="0" />
-    <xacro:property name="ring_dip_velocity_max" value="1" />
-    <xacro:property name="ring_dip_torque_max" value="100" />
+    <xacro:property name="ring_dip_velocity_max" value="2.62" />
+    <xacro:property name="ring_dip_torque_max" value="0.444" />
 
     <xacro:property name="pinky_mcp_position_max" value="${88*pi/180.0}" />
     <xacro:property name="pinky_mcp_position_min" value="0" />
-    <xacro:property name="pinky_mcp_velocity_max" value="1" />
-    <xacro:property name="pinky_mcp_torque_max" value="100" />
+    <xacro:property name="pinky_mcp_velocity_max" value="2.54" />
+    <xacro:property name="pinky_mcp_torque_max" value="0.444" />
 
     <xacro:property name="pinky_pip_position_max" value="${81*pi/180.0}" />
     <xacro:property name="pinky_pip_position_min" value="0" />
-    <xacro:property name="pinky_pip_velocity_max" value="1" />
-    <xacro:property name="pinky_pip_torque_max" value="100" />
+    <xacro:property name="pinky_pip_velocity_max" value="2.29" />
+    <xacro:property name="pinky_pip_torque_max" value="0.444" />
 
     <xacro:property name="pinky_dip_position_max" value="${79*pi/180.0}" />
     <xacro:property name="pinky_dip_position_min" value="0" />
-    <xacro:property name="pinky_dip_velocity_max" value="1" />
-    <xacro:property name="pinky_dip_torque_max" value="100" />
+    <xacro:property name="pinky_dip_velocity_max" value="2.62" />
+    <xacro:property name="pinky_dip_torque_max" value="0.444" />
 
 
     <!-- dynamics inertial value -->
