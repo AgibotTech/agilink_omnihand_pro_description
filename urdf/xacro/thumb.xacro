@@ -20,7 +20,7 @@
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${thumb_metacarpals_base1_com_x} ${thumb_metacarpals_base1_com_y*mirror} ${thumb_metacarpals_base1_com_z}" />
-                <mass value="${thumb_metacarpals_mass}" />
+                <mass value="${thumb_metacarpals_base1_mass}" />
                 <inertia
                     ixx="${thumb_metacarpals_base1_ixx}" ixy="${thumb_metacarpals_base1_ixy*mirror}"
                     ixz="${thumb_metacarpals_base1_ixz}"
@@ -30,8 +30,8 @@
         </link>
 
         <joint name="${name}_thumb_roll_joint" type="revolute">
-            <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="${-0.293*mirror} 0 0" />
-            <parent link="${name}_hand_base_link" />
+            <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="${thumb_roll_r*mirror} 0 0" />
+            <parent link="hand_base_link" />
             <child link="${name}_thumb_metacarpals_base1" />
             <axis xyz="1 0 0" />
 
@@ -84,7 +84,7 @@
                     rpy="${thumb_abad_r*mirror} ${thumb_abad_p} ${thumb_abad_yy*mirror}" />
             <parent link="${name}_thumb_metacarpals_base1" />
             <child link="${name}_thumb_metacarpals_base2" />
-            <axis xyz="0 0 1" />
+            <axis xyz="0 -1 0" />
 
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"

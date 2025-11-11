@@ -5,17 +5,16 @@
 
     <xacro:include filename="$(find o12_description)/urdf/xacro/const.xacro" />
     <xacro:include filename="$(find o12_description)/urdf/xacro/material.xacro" />
-    <xacro:property name="mesh_path" value="package://o12_description/meshes" />
     <xacro:include filename="$(find o12_description)/urdf/xacro/thumb.xacro" />
     <xacro:include filename="$(find o12_description)/urdf/xacro/index.xacro" />
     <xacro:include filename="$(find o12_description)/urdf/xacro/middle.xacro" />
-    <xacro:include filename="$(find o12_description)/urdf/xacro/ring.xacro" />
-    <xacro:include filename="$(find o12_description)/urdf/xacro/pinky.xacro" />
+    <xacro:include filename="$(find o12_description)/urdf/xacro/ring_pinky.xacro" />
+    <xacro:property name="mesh_path" value="package://o12_description/meshes" />
     
 
     <xacro:macro name="hand" params="name mirror mirror_mesh *origin">
 
-        <link name="${name}_hand_base_link">
+        <link name="hand_base_link">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -66,14 +65,13 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
         </xacro:middle>
 
-        <xacro:ring name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        <xacro:ring name="${name}_ring" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="${ring_mcp_x} ${ring_mcp_y*mirror} ${ring_mcp_z}" rpy="0.0 0.0 0.0" />
         </xacro:ring>
 
-        <xacro:pinky name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-        </xacro:pinky>
+        <xacro:ring name="${name}_pinky" mirror="${mirror}" mirror_mesh="${mirror_mesh}" >
+            <origin xyz="${pinky_mcp_x} ${pinky_mcp_y*mirror} ${pinky_mcp_z}" rpy="0.0 0.0 0.0" />
+        </xacro:ring>
 
     </xacro:macro>
 </robot>
-

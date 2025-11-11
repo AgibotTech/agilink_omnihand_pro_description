@@ -5,7 +5,7 @@
     <xacro:macro name="ring" params="name mirror mirror_mesh *origin">
         <!-- ring  -->
 
-        <link name="${name}_ring_proximal">
+        <link name="${name}_proximal">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -36,16 +36,16 @@
             </collision>
         </link>
 
-        <joint name="${name}_ring_mcp_joint" type="revolute">
-            <origin xyz="${ring_mcp_x} ${ring_mcp_y*mirror} ${ring_mcp_z}" rpy="0 0 0" />
-            <parent link="${name}_hand_base_link" />
-            <child link="${name}_ring_proximal" />
+        <joint name="${name}_mcp_joint" type="revolute">
+            <xacro:insert_block name="origin" />
+            <parent link="hand_base_link" />
+            <child link="${name}_proximal" />
             <axis xyz="0 1 0" />
             <limit effort="${ring_mcp_torque_max}" velocity="${ring_mcp_velocity_max}"
                 lower="${ring_mcp_position_min}" upper="${ring_mcp_position_max}" />
         </joint>
 
-        <link name="${name}_ring_middle">
+        <link name="${name}_middle">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -76,20 +76,20 @@
             </collision>
         </link>
 
-        <joint name="${name}_ring_pip_joint" type="revolute">
+        <joint name="${name}_pip_joint" type="revolute">
             <origin xyz="${ring_pip_x} ${ring_pip_y} ${ring_pip_z}" rpy="0 0 0" />
-            <parent link="${name}_ring_proximal" />
-            <child link="${name}_ring_middle" />
+            <parent link="${name}_proximal" />
+            <child link="${name}_middle" />
             <axis xyz="0 1 0" />
             <limit effort="${ring_pip_torque_max}" velocity="${ring_pip_velocity_max}"
                 lower="${ring_pip_position_min}" upper="${ring_pip_position_max}" />
             <mimic
-                joint="${name}_ring_mcp_joint"
+                joint="${name}_mcp_joint"
                 multiplier="${ring_pip_multiplier}"
                 offset="0" />
         </joint>
 
-        <link name="${name}_ring_distal">
+        <link name="${name}_distal">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -120,20 +120,20 @@
             </collision>
         </link>
 
-        <joint name="${name}_ring_dip_joint" type="revolute">
+        <joint name="${name}_dip_joint" type="revolute">
             <origin xyz=" ${ring_dip_x}  ${ring_dip_y} ${ring_dip_z}" rpy="0 0 0" />
-            <parent link="${name}_ring_middle" />
-            <child link="${name}_ring_distal" />
+            <parent link="${name}_middle" />
+            <child link="${name}_distal" />
             <axis xyz="0 1 0" />
             <limit effort="${ring_dip_torque_max}" velocity="${ring_dip_velocity_max}"
                 lower="${ring_dip_position_min}" upper="${ring_dip_position_max}" />
             <mimic
-                joint="${name}_ring_mcp_joint"
+                joint="${name}_mcp_joint"
                 multiplier="${ring_dip_multiplier}"
                 offset="0" />
         </joint>
 
-        <link name="${name}_ring_distal_vertices_virtual_coordinates">
+        <link name="${name}_distal_vertices_virtual_coordinates">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -148,10 +148,10 @@
             </visual>
         </link>
 
-        <joint name="${name}_ring_tip_joint" type="fixed">
+        <joint name="${name}_tip_joint" type="fixed">
             <origin xyz="${ring_tips_x} 0 ${ring_tips_z}" rpy="0 0 0" />
-            <parent link="${name}_ring_distal" />
-            <child link="${name}_ring_distal_vertices_virtual_coordinates" />
+            <parent link="${name}_distal" />
+            <child link="${name}_distal_vertices_virtual_coordinates" />
         </joint>
     </xacro:macro>
 </robot>

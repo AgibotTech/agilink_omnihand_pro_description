@@ -31,7 +31,7 @@
 
         <joint name="${name}_middle_abad_joint" type="revolute">
             <origin xyz="${middle_abad_x} ${middle_abad_y*mirror} ${middle_abad_z}" rpy="0 0 0" />
-            <parent link="${name}_hand_base_link" />
+            <parent link="hand_base_link" />
             <child link="${name}_middle_metacarpals" />
             <axis xyz="1 0 0" />
 

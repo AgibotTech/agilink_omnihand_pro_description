@@ -38,7 +38,7 @@
 
         <joint name="${name}_pinky_mcp_joint" type="revolute">
             <origin xyz="${pinky_mcp_x} ${pinky_mcp_y*mirror} ${pinky_mcp_z}" rpy="0 0 0" />
-            <parent link="${name}_hand_base_link" />
+            <parent link="hand_base_link" />
             <child link="${name}_pinky_proximal" />
             <axis xyz="0 1 0" />
             <limit effort="${pinky_mcp_torque_max}" velocity="${pinky_mcp_velocity_max}"

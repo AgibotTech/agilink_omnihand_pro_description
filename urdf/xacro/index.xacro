@@ -31,7 +31,7 @@
 
         <joint name="${name}_index_abad_joint" type="revolute">
             <origin xyz="${index_abad_x} ${index_abad_y*mirror} ${index_abad_z}" rpy="0 0 0" />
-            <parent link="${name}_hand_base_link" />
+            <parent link="hand_base_link" />
             <child link="${name}_index_metacarpals" />
             <axis xyz="1 0 0" />
 
@@ -102,7 +102,7 @@
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${index_middle_com_x} ${index_middle_com_y*mirror} ${index_middle_com_z}" />
-                <mass value="${index_proximal_mass}" />
+                <mass value="${index_middle_mass}" />
                 <inertia
                     ixx="${index_middle_ixx}" ixy="${index_middle_ixy*mirror}" 
                     ixz="${index_middle_ixz}"
