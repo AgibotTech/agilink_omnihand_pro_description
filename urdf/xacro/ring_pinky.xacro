@@ -9,29 +9,26 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_proximal.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_proximal.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/ring_proximal.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${ring_proximal_com_x} ${ring_proximal_com_y*mirror} ${ring_proximal_com_z}" />
                 <mass value="${ring_proximal_mass}" />
                 <inertia
-                    ixx="${ring_proximal_ixx}" ixy="${ring_proximal_ixy*mirror}" 
+                    ixx="${ring_proximal_ixx}" ixy="${ring_proximal_ixy*mirror}"
                     ixz="${ring_proximal_ixz}"
-                    iyy="${ring_proximal_iyy}" iyz="${ring_proximal_iyz*mirror}" 
+                    iyy="${ring_proximal_iyy}" iyz="${ring_proximal_iyz*mirror}"
                     izz="${ring_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${ring_proximal_collision_x} ${ring_proximal_collision_y} ${ring_proximal_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${ring_proximal_collision_x} ${ring_proximal_collision_y} ${ring_proximal_collision_z}" />
                 <geometry>
-                    <cylinder radius="${ring_proximal_collision_r}" length="${ring_proximal_collision_l}" />
+                    <cylinder radius="${ring_proximal_collision_r}"
+                        length="${ring_proximal_collision_l}" />
                 </geometry>
             </collision>
         </link>
@@ -49,29 +46,26 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_middle.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_middle.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/ring_middle.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${ring_middle_com_x} ${ring_middle_com_y*mirror} ${ring_middle_com_z}" />
                 <mass value="${ring_proximal_mass}" />
                 <inertia
-                    ixx="${ring_middle_ixx}" ixy="${ring_middle_ixy*mirror}" 
+                    ixx="${ring_middle_ixx}" ixy="${ring_middle_ixy*mirror}"
                     ixz="${ring_middle_ixz}"
-                    iyy="${ring_middle_iyy}" iyz="${ring_middle_iyz*mirror}" 
+                    iyy="${ring_middle_iyy}" iyz="${ring_middle_iyz*mirror}"
                     izz="${ring_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${ring_middle_collision_x} ${ring_middle_collision_y} ${ring_middle_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${ring_middle_collision_x} ${ring_middle_collision_y} ${ring_middle_collision_z}" />
                 <geometry>
-                    <cylinder radius="${ring_middle_collision_r}" length="${ring_middle_collision_l}" />
+                    <cylinder radius="${ring_middle_collision_r}"
+                        length="${ring_middle_collision_l}" />
                 </geometry>
             </collision>
         </link>
@@ -93,14 +87,9 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/ring_distal.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
@@ -113,9 +102,11 @@
                     izz="${ring_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${ring_distal_collision_x} ${ring_distal_collision_y} ${ring_distal_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${ring_distal_collision_x} ${ring_distal_collision_y} ${ring_distal_collision_z}" />
                 <geometry>
-                    <cylinder radius="${ring_distal_collision_r}" length="${ring_distal_collision_l}" />
+                    <cylinder radius="${ring_distal_collision_r}"
+                        length="${ring_distal_collision_l}" />
                 </geometry>
             </collision>
         </link>
@@ -134,18 +125,12 @@
         </joint>
 
         <link name="${name}_distal_vertices_virtual_coordinates">
-            <visual>
+            <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/ring_distal_vertices_virtual_coordinates.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/ring_distal_vertices_virtual_coordinates.STL" />
-                    </xacro:if>
+                    <sphere radius="0.001" />
                 </geometry>
-                <material name="tips" />
-            </visual>
+            </collision>
         </link>
 
         <joint name="${name}_tip_joint" type="fixed">

@@ -10,24 +10,22 @@ from launch.actions import OpaqueFunction
 
 def launch_setup(context, *args, **kwargs):
     # package
-    pkg_dir = get_package_share_directory('o12_description')
+    pkg_dir = get_package_share_directory('omnihand_pro_description')
 
     xacro_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t2_right.xacro')
+        'omnihand_pro_description'), 'urdf/xacro', 'omnihand_pro_right.xacro')
     
-    rviz_arguments = ['-d', os.path.join(pkg_dir, 'rviz', 'o12_right_hand1.rviz')]
+    rviz_arguments = ['-d', os.path.join(pkg_dir, 'rviz', 'omnihand_pro_right.rviz')]
 
     hand_type = LaunchConfiguration('hand_type').perform(context)  
     # urdf
     if hand_type == 'left':
         xacro_path = os.path.join(get_package_share_directory(
-        'o12_description'), 'urdf/xacro', 'o12_t2_left.xacro')
-        rviz_arguments=['-d', [os.path.join(pkg_dir, 'rviz', 'o12_left_hand1.rviz')]]
+        'omnihand_pro_description'), 'urdf/xacro', 'omnihand_pro_left.xacro')
+        rviz_arguments=['-d', [os.path.join(pkg_dir, 'rviz', 'omnihand_pro_left.rviz')]]
     
     urdf_contents = xacro.process_file(xacro_path).toprettyxml(indent='  ')
     
-#    with open(urdf_path, 'r') as infp:
-#        urdf_contents = infp.read()
 
     joint_state_publisher_node = Node(
         package='joint_state_publisher_gui',
@@ -55,13 +53,6 @@ def launch_setup(context, *args, **kwargs):
         output='screen',
         arguments=rviz_arguments
     )
-
-    # rviz2_node = Node(
-    #     package ='rviz2',
-    #     executable='rviz2',
-    #     name='rviz2',
-    #     output='screen'
-    # )
 
     return [joint_state_publisher_node, robot_state_publisher_node, rviz2_node]
 

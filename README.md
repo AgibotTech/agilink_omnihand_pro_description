@@ -1,6 +1,6 @@
-# O12Hand ROS 2 Package
+# omnihand_proHand ROS 2 Package
 
-This is a ROS 2 package for O12Hand. It includes the URDF files for both the left and right hands, as well as their visualization in RVIZ. The recommended ROS 2 version for installation is **Humble**.
+This is a ROS 2 package for omnihand_pro. It includes the URDF files for both the left and right hands, as well as their visualization in RVIZ. The recommended ROS 2 version for installation is **Humble**.
 
 ## Installation
 
@@ -8,8 +8,8 @@ This is a ROS 2 package for O12Hand. It includes the URDF files for both the lef
 Create a new `src` directory, navigate into it, and clone the repository:
 
 ```bash
-mkdir -p ~/o12hand_ws/src
-cd ~/o12hand_ws/src
+mkdir -p ~/omnihand_pro_ws/src
+cd ~/omnihand_pro_ws/src
 git clone <repository_url>
 cd ..
 ```
@@ -32,21 +32,15 @@ source install/setup.bash
 To generate the OmniHand URDF file from the Xacro description, use:
 
 ```bash
-cd ~/o12_ws/src/o12_description/urdf/xacro
-xacro o12_t2_right.xacro > o12_t2_right.urdf
-xacro o12_t2_left.xacro > o12_t2_left.urdf
+cd ~/omnihand_pro_ws/src/omnihand_pro_description/urdf/xacro
+xacro omnihand_pro_right.xacro > omnihand_pro_right.urdf
+xacro omnihand_pro_left.xacro > omnihand_pro_left.urdf
 ```
 
 ## Visualization in RViz
-To visualize O12Hand in RViz, run:
+To visualize omnihand_proHand in RViz, run:
 
 ```bash
-ros2 launch o12_description o12_description.launch.py
-ros2 launch o12_description o12_description.launch.py hand_type:=left
-```
-
-launch from xacro, run:
-```bash
-ros2 launch o12_description o12_xacro.launch.py
-ros2 launch o12_description o12_xacro.launch.py hand_type:=left
+ros2 launch omnihand_pro_description omnihand_pro_description.launch.py
+ros2 launch omnihand_pro_description omnihand_pro_description.launch.py hand_type:=left
 ```

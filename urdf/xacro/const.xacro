@@ -99,18 +99,6 @@
     <xacro:property name="pinky_mcp_y" value="-0.033576" />
     <xacro:property name="pinky_mcp_z" value="0.11272" />
 
-    <xacro:property name="pinky_pip_x" value="-0.0026377" />
-    <xacro:property name="pinky_pip_y" value="0" />
-    <xacro:property name="pinky_pip_z" value="0.039937" />
-
-    <xacro:property name="pinky_dip_x" value="0.0070189" />
-    <xacro:property name="pinky_dip_y" value="0" />
-    <xacro:property name="pinky_dip_z" value="0.026193" />
-
-    <xacro:property name="pinky_tips_x" value="-0.01465" />
-    <xacro:property name="pinky_tips_y" value="0" />
-    <xacro:property name="pinky_tips_z" value="0.02533" />
-
 
     <!-- joint limits -->
     <xacro:property name="thumb_roll_position_max" value="0.66" />
@@ -192,22 +180,6 @@
     <xacro:property name="ring_dip_position_min" value="0" />
     <xacro:property name="ring_dip_velocity_max" value="2.62" />
     <xacro:property name="ring_dip_torque_max" value="0.444" />
-
-    <xacro:property name="pinky_mcp_position_max" value="1.38" />
-    <xacro:property name="pinky_mcp_position_min" value="0" />
-    <xacro:property name="pinky_mcp_velocity_max" value="2.54" />
-    <xacro:property name="pinky_mcp_torque_max" value="0.444" />
-
-    <xacro:property name="pinky_pip_position_max" value="1.51" />
-    <xacro:property name="pinky_pip_position_min" value="0" />
-    <xacro:property name="pinky_pip_velocity_max" value="2.29" />
-    <xacro:property name="pinky_pip_torque_max" value="0.444" />
-
-    <xacro:property name="pinky_dip_position_max" value="1.31" />
-    <xacro:property name="pinky_dip_position_min" value="0" />
-    <xacro:property name="pinky_dip_velocity_max" value="2.62" />
-    <xacro:property name="pinky_dip_torque_max" value="0.444" />
-
 
     <!-- dynamics inertial value -->
     <!-- hand_base_link -->
@@ -444,48 +416,6 @@
     <xacro:property name="ring_distal_iyz" value="1.83190371320788E-09" />
     <xacro:property name="ring_distal_izz" value="2.9683840460863E-07" />
 
-    <!-- pinky_proximal -->
-    <xacro:property name="pinky_proximal_mass" value="0.00942129481227053" />
-
-    <xacro:property name="pinky_proximal_com_x" value="-0.00110274583398754" />
-    <xacro:property name="pinky_proximal_com_y" value="-1.49619924585953E-05" />
-    <xacro:property name="pinky_proximal_com_z" value="0.0202354738794492" />
-
-    <xacro:property name="pinky_proximal_ixx" value="1.23336184044598E-06" />
-    <xacro:property name="pinky_proximal_ixy" value="-1.9454449673074E-10" />
-    <xacro:property name="pinky_proximal_ixz" value="-2.12819643604026E-08" />
-    <xacro:property name="pinky_proximal_iyy" value="1.34371283127798E-06" />
-    <xacro:property name="pinky_proximal_iyz" value="7.3237702177668E-10" />
-    <xacro:property name="pinky_proximal_izz" value="3.57694858526348E-07" />
-
-    <!-- pinky_middle -->
-    <xacro:property name="pinky_middle_mass" value="0.0043895551845108" />
-
-    <xacro:property name="pinky_middle_com_x" value="0.00151057979278503" />
-    <xacro:property name="pinky_middle_com_y" value="-1.6900540152659E-05" />
-    <xacro:property name="pinky_middle_com_z" value="0.0134027464374156" />
-
-    <xacro:property name="pinky_middle_ixx" value="3.87167624824879E-07" />
-    <xacro:property name="pinky_middle_ixy" value="1.17111909554758E-10" />
-    <xacro:property name="pinky_middle_ixz" value="3.74765585946844E-08" />
-    <xacro:property name="pinky_middle_iyy" value="3.39840286974485E-07" />
-    <xacro:property name="pinky_middle_iyz" value="-5.02390427470104E-11" />
-    <xacro:property name="pinky_middle_izz" value="2.37622611168141E-07" />
-
-    <!-- pinky_distal -->
-    <xacro:property name="pinky_distal_mass" value="0.00919573822628758" />
-
-    <xacro:property name="pinky_distal_com_x" value="-0.00754815041712859" />
-    <xacro:property name="pinky_distal_com_y" value="-2.51198075546522E-05" />
-    <xacro:property name="pinky_distal_com_z" value="0.00768282703923547" />
-
-    <xacro:property name="pinky_distal_ixx" value="6.28294383904053E-07" />
-    <xacro:property name="pinky_distal_ixy" value="-4.06537827440511E-10" />
-    <xacro:property name="pinky_distal_ixz" value="-1.31550133887708E-07" />
-    <xacro:property name="pinky_distal_iyy" value="6.32142940160098E-07" />
-    <xacro:property name="pinky_distal_iyz" value="1.8469818617463E-09" />
-    <xacro:property name="pinky_distal_izz" value="2.87911694494272E-07" />
-
     <!-- mimic joint -->
     <xacro:property name="thumb_dip_multiplier" value="0.8068" />
     <xacro:property name="index_dip_multiplier" value="1.0362" />
@@ -597,26 +527,6 @@
     <xacro:property name="ring_distal_collision_z" value="0.014" />
     <xacro:property name="ring_distal_collision_r" value="0.01" />
     <xacro:property name="ring_distal_collision_l" value="0.018" />
-
-
-    <!-- pinky -->
-    <xacro:property name="pinky_proximal_collision_x" value="-0.002" />
-    <xacro:property name="pinky_proximal_collision_y" value="0" />
-    <xacro:property name="pinky_proximal_collision_z" value="0.014" />
-    <xacro:property name="pinky_proximal_collision_r" value="0.01" />
-    <xacro:property name="pinky_proximal_collision_l" value="0.035" />
-
-    <xacro:property name="pinky_middle_collision_x" value="0.0015" />
-    <xacro:property name="pinky_middle_collision_y" value="0" />
-    <xacro:property name="pinky_middle_collision_z" value="0.014" />
-    <xacro:property name="pinky_middle_collision_r" value="0.01" />
-    <xacro:property name="pinky_middle_collision_l" value="0.028" />
-
-    <xacro:property name="pinky_distal_collision_x" value="-0.006" />
-    <xacro:property name="pinky_distal_collision_y" value="0" />
-    <xacro:property name="pinky_distal_collision_z" value="0.014" />
-    <xacro:property name="pinky_distal_collision_r" value="0.01" />
-    <xacro:property name="pinky_distal_collision_l" value="0.018" />
 
 
 </robot>

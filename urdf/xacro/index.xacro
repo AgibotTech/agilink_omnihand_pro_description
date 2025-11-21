@@ -8,14 +8,9 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/index_metacarpals.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/index_metacarpals.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/index_metacarpals.STL" />
                 </geometry>
-                <material name="metacarpals"/>
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
@@ -24,7 +19,7 @@
                 <inertia
                     ixx="${index_metacarpals_ixx}" ixy="${index_metacarpals_ixy*mirror}"
                     ixz="${index_metacarpals_ixz}"
-                    iyy="${index_metacarpals_iyy}" iyz="${index_metacarpals_iyz*mirror}" 
+                    iyy="${index_metacarpals_iyy}" iyz="${index_metacarpals_iyz*mirror}"
                     izz="${index_metacarpals_izz}" />
             </inertial>
         </link>
@@ -50,31 +45,28 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/index_proximal.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/index_proximal.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/index_proximal.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${index_proximal_com_x} ${index_proximal_com_y*mirror} ${index_proximal_com_z}" />
                 <mass value="${index_proximal_mass}" />
                 <inertia
-                    ixx="${index_proximal_ixx}" ixy="${index_proximal_ixy*mirror}" 
-                    ixz="${index_proximal_ixz}" 
-                    iyy="${index_proximal_iyy}" iyz="${index_proximal_iyz*mirror}" 
+                    ixx="${index_proximal_ixx}" ixy="${index_proximal_ixy*mirror}"
+                    ixz="${index_proximal_ixz}"
+                    iyy="${index_proximal_iyy}" iyz="${index_proximal_iyz*mirror}"
                     izz="${index_proximal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_proximal_collision_x} ${index_proximal_collision_y} ${index_proximal_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${index_proximal_collision_x} ${index_proximal_collision_y} ${index_proximal_collision_z}" />
                 <geometry>
-                    <cylinder radius="${index_proximal_collision_r}" length="${index_proximal_collision_l}" />
+                    <cylinder radius="${index_proximal_collision_r}"
+                        length="${index_proximal_collision_l}" />
                 </geometry>
-            </collision>            
+            </collision>
         </link>
 
         <joint name="${name}_index_mcp_joint" type="revolute">
@@ -90,29 +82,26 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/index_middle.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/index_middle.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/index_middle.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
                     xyz="${index_middle_com_x} ${index_middle_com_y*mirror} ${index_middle_com_z}" />
                 <mass value="${index_middle_mass}" />
                 <inertia
-                    ixx="${index_middle_ixx}" ixy="${index_middle_ixy*mirror}" 
+                    ixx="${index_middle_ixx}" ixy="${index_middle_ixy*mirror}"
                     ixz="${index_middle_ixz}"
-                    iyy="${index_middle_iyy}" iyz="${index_middle_iyz*mirror}" 
+                    iyy="${index_middle_iyy}" iyz="${index_middle_iyz*mirror}"
                     izz="${index_middle_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_middle_collision_x} ${index_middle_collision_y} ${index_middle_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${index_middle_collision_x} ${index_middle_collision_y} ${index_middle_collision_z}" />
                 <geometry>
-                    <cylinder radius="${index_middle_collision_r}" length="${index_middle_collision_l}" />
+                    <cylinder radius="${index_middle_collision_r}"
+                        length="${index_middle_collision_l}" />
                 </geometry>
             </collision>
         </link>
@@ -130,14 +119,9 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/index_distal.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/index_distal.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/index_distal.STL" />
                 </geometry>
-                <material name="white" />
+                <material name="black" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
@@ -150,9 +134,11 @@
                     izz="${index_distal_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="${index_distal_collision_x} ${index_distal_collision_y} ${index_distal_collision_z}" />
+                <origin rpy="0 0 0"
+                    xyz="${index_distal_collision_x} ${index_distal_collision_y} ${index_distal_collision_z}" />
                 <geometry>
-                    <cylinder radius="${index_distal_collision_r}" length="${index_distal_collision_l}" />
+                    <cylinder radius="${index_distal_collision_r}"
+                        length="${index_distal_collision_l}" />
                 </geometry>
             </collision>
         </link>
@@ -171,18 +157,12 @@
         </joint>
 
         <link name="${name}_index_distal_vertices_virtual_coordinates">
-            <visual>
+            <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/o12_t2_left_meshes/index_distal_vertices_virtual_coordinates.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/o12_t2_right_meshes/index_distal_vertices_virtual_coordinates.STL" />
-                    </xacro:if>
+                    <sphere radius="0.001" />
                 </geometry>
-                <material name="tips"/>
-            </visual>
+            </collision>
         </link>
 
         <joint name="${name}_index_tip" type="fixed">
