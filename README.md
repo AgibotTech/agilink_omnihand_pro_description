@@ -32,7 +32,7 @@ source install/setup.bash
 To generate the OmniHand URDF file from the Xacro description, use:
 
 ```bash
-cd ~/omnihand_pro_ws/src/omnihand_pro_description/urdf/xacro
+cd ~/omnihand_pro_ws/src/o12_hand_description/urdf/xacro
 xacro omnihand_pro_right.xacro > omnihand_pro_right.urdf
 xacro omnihand_pro_left.xacro > omnihand_pro_left.urdf
 ```
