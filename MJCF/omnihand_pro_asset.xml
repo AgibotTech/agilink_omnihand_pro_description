@@ -1,0 +1,45 @@
+<mujoco model="omnihand_pro_asset">
+    <compiler angle="radian"
+        meshdir="../meshes" />
+    <asset>
+        <mesh name="l_palm" file="l_palm.STL" />
+        <mesh name="l_thumb_roll" file="l_thumb_roll.STL" />
+        <mesh name="l_thumb_abad" file="l_thumb_abad.STL" />
+        <mesh name="l_thumb_mcp" file="l_thumb_mcp.STL" />
+        <mesh name="l_thumb_pip" file="l_thumb_pip.STL" />
+        <mesh name="l_thumb_dip" file="l_thumb_dip.STL" />
+        <mesh name="r_palm" file="r_palm.STL" />
+        <mesh name="r_thumb_roll" file="r_thumb_roll.STL" />
+        <mesh name="r_thumb_abad" file="r_thumb_abad.STL" />
+        <mesh name="r_thumb_mcp" file="r_thumb_mcp.STL" />
+        <mesh name="r_thumb_pip" file="r_thumb_pip.STL" />
+        <mesh name="r_thumb_dip" file="r_thumb_dip.STL" />
+        <mesh name="index_abad" file="index_abad.STL" />
+        <mesh name="index_mcp" file="index_mcp.STL" />
+        <mesh name="index_pip" file="index_pip.STL" />
+        <mesh name="index_dip" file="index_dip.STL" />
+        <mesh name="middle_abad" file="middle_abad.STL" />
+        <mesh name="middle_mcp" file="middle_mcp.STL" />
+        <mesh name="middle_pip" file="middle_pip.STL" />
+        <mesh name="middle_dip" file="middle_dip.STL" />
+        <mesh name="ring_mcp" file="ring_mcp.STL" />
+        <mesh name="ring_pip" file="ring_pip.STL" />
+        <mesh name="ring_dip" file="ring_dip.STL" />
+        <mesh name="thumb_tip" file="thumb_tip_col.STL" />
+        <mesh name="finger_tip" file="finger_tip_col.STL" />
+
+    </asset>
+    <default>
+        <default class="hand_joint">
+            <joint type="hinge" limited="true" damping="0.5" armature="0.01" margin="0.01"
+                frictionloss="0.001" />
+        </default>
+        <default class="plastic_visual">
+            <geom type="mesh" contype="0" conaffinity="0" group="2" />
+        </default>
+        <default class="plastic_collision">
+            <geom rgba="1 1 1 1" type="mesh" density="662" friction="1 0.005 0.001" condim="3"
+                margin="0.0005" contype="1" conaffinity="1" group="3" />
+        </default>
+    </default>
+</mujoco>

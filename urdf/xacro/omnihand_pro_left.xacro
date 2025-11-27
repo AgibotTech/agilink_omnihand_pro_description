@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="omnihand">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="omnihand_pro_left">
 
 <xacro:include filename="$(find omnihand_pro_description)/urdf/xacro/hand.xacro" />
 

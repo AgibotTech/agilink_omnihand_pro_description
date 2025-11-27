@@ -53,6 +53,7 @@ def launch_setup(context, *args, **kwargs):
         output='screen',
         arguments=rviz_arguments
     )
+    
 
     return [joint_state_publisher_node, robot_state_publisher_node, rviz2_node]
 

@@ -1,4 +1,4 @@
-# omnihand_proHand ROS 2 Package
+# omnihand_pro_description ROS 2 Package
 
 This is a ROS 2 package for omnihand_pro. It includes the URDF files for both the left and right hands, as well as their visualization in RVIZ. The recommended ROS 2 version for installation is **Humble**.
 
