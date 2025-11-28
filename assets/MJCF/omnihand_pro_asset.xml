@@ -27,6 +27,7 @@
         <mesh name="ring_dip" file="ring_dip.STL" />
         <mesh name="thumb_tip" file="thumb_tip_col.STL" />
         <mesh name="finger_tip" file="finger_tip_col.STL" />
+        <material name="black" rgba="0.25 0.25 0.25 1.0" />
 
     </asset>
     <default>
@@ -35,7 +36,7 @@
                 frictionloss="0.001" />
         </default>
         <default class="plastic_visual">
-            <geom type="mesh" contype="0" conaffinity="0" group="2" />
+            <geom type="mesh" contype="0" conaffinity="0" group="2" material="black"/>
         </default>
         <default class="plastic_collision">
             <geom rgba="1 1 1 1" type="mesh" density="662" friction="1 0.005 0.001" condim="3"

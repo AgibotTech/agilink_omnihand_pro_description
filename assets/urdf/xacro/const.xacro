@@ -124,8 +124,8 @@
     <xacro:property name="thumb_dip_velocity_max" value="1.9" />
     <xacro:property name="thumb_dip_torque_max" value="0.920" />
 
-    <xacro:property name="index_abad_position_max" value="-0.26" />
-    <xacro:property name="index_abad_position_min" value="0.26" />
+    <xacro:property name="index_abad_position_max" value="0.26" />
+    <xacro:property name="index_abad_position_min" value="-0.26" />
     <xacro:property name="index_abad_velocity_max" value="2.16" />
     <xacro:property name="index_abad_torque_max" value="1.001" />
 
@@ -144,8 +144,8 @@
     <xacro:property name="index_dip_velocity_max" value="2.85" />
     <xacro:property name="index_dip_torque_max" value="0.216" />
 
-    <xacro:property name="middle_abad_position_max" value="-0.26" />
-    <xacro:property name="middle_abad_position_min" value="0.26" />
+    <xacro:property name="middle_abad_position_max" value="0.26" />
+    <xacro:property name="middle_abad_position_min" value="-0.26" />
     <xacro:property name="middle_abad_velocity_max" value="2.16" />
     <xacro:property name="middle_abad_torque_max" value="1.031" />
 

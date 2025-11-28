@@ -64,7 +64,7 @@
       <body name="L_index_abad_link" pos="-0.0134 -0.030778 0.11936">
         <inertial pos="0.00904689 -2.37542e-06 0.0029644" quat="0.666099 0.665921 -0.237302 0.2378"
           mass="0.00769184" diaginertia="3.4067e-07 2.69715e-07 1.96446e-07" />
-        <joint name="L_index_abad_joint" pos="0 0 0" axis="1 0 0" limited="false" range="0.26 -0.26"
+        <joint name="L_index_abad_joint" pos="0 0 0" axis="1 0 0" limited="false" range="-0.26 0.26"
           class="hand_joint" />
         <geom class="plastic_visual" mesh="index_abad" />
         <body name="L_index_mcp_link" pos="0.01357 0 0">
@@ -107,7 +107,7 @@
         <inertial pos="0.00886137 -3.75661e-09 0.00266833" quat="0.6281 0.628111 -0.324772 0.324791"
           mass="0.00637103" diaginertia="2.76199e-07 2.24278e-07 1.58576e-07" />
         <joint name="L_middle_abad_joint" pos="0 0 0" axis="1 0 0" limited="false"
-          range="0.26 -0.26" class="hand_joint" />
+          range="-0.26 0.26" class="hand_joint" />
         <geom class="plastic_visual" mesh="middle_abad" />
         <body name="L_middle_mcp_link" pos="0.01337 0 0">
           <inertial pos="-0.00165477 -2.2098e-06 0.0225332"
