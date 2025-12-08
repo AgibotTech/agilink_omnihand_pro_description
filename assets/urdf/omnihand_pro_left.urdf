@@ -86,7 +86,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/l_thumb_mcp.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_mcp.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -113,7 +113,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/l_thumb_pip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_pip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -140,7 +140,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/l_thumb_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -258,7 +258,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/index_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -375,7 +375,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/middle_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -472,7 +472,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/ring_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -569,7 +569,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/ring_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>

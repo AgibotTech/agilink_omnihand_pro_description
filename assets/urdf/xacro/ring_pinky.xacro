@@ -87,7 +87,7 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <mesh filename="${mesh_path}/ring_dip.STL" />
+                    <mesh filename="${mesh_path}/finger_dip.STL" />
                 </geometry>
                 <material name="black" />
             </visual>

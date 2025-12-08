@@ -64,7 +64,7 @@
                 <geometry>
                     <mesh filename="${mesh_path}/collision/middle_mcp_col.STL" />
                 </geometry>
-                <material name="red"/>
+                 
             </collision>
         </link>
 
@@ -100,7 +100,7 @@
                 <geometry>
                     <mesh filename="${mesh_path}/collision/middle_pip_col.STL" />
                 </geometry>
-                <material name="red"/>
+                 
             </collision>
         </link>
 
@@ -117,7 +117,7 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <mesh filename="${mesh_path}/middle_dip.STL" />
+                    <mesh filename="${mesh_path}/finger_dip.STL" />
                 </geometry>
                 <material name="black" />
             </visual>
@@ -134,9 +134,9 @@
             <collision>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <mesh filename="${mesh_path}/collision/finger_tip_col.STL" />
+                    <mesh filename="${mesh_path}/collision/finger_dip_col.STL" />
                 </geometry>
-                <material name="red"/>
+                 
             </collision>
         </link>
 

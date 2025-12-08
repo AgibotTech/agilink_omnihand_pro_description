@@ -7,9 +7,6 @@
   <material name="black">
     <color rgba="0.5 0.5 0.5 1.0"/>
   </material>
-  <material name="red">
-    <color rgba="1 0.0 0.0 0.5"/>
-  </material>
   <link name="palm">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -89,7 +86,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/r_thumb_mcp.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_mcp.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -101,7 +98,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/r_thumb_mcp_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/thumb_mcp_col.STL"/>
       </geometry>
     </collision>
   </link>
@@ -116,7 +113,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/r_thumb_pip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_pip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -128,7 +125,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/r_thumb_pip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/thumb_pip_col.STL"/>
       </geometry>
     </collision>
   </link>
@@ -143,7 +140,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/r_thumb_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/thumb_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -155,7 +152,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/thumb_tip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/thumb_dip_col.STL"/>
       </geometry>
     </collision>
   </link>
@@ -221,7 +218,6 @@
       <geometry>
         <mesh filename="package://omnihand_pro_description/meshes/collision/index_mcp_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_index_mcp_joint" type="revolute">
@@ -249,7 +245,6 @@
       <geometry>
         <mesh filename="package://omnihand_pro_description/meshes/collision/index_pip_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_index_pip_joint" type="revolute">
@@ -263,7 +258,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/index_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -275,9 +270,8 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_tip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_dip_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_index_dip_joint" type="revolute">
@@ -341,7 +335,6 @@
       <geometry>
         <mesh filename="package://omnihand_pro_description/meshes/collision/middle_mcp_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_middle_mcp_joint" type="revolute">
@@ -369,7 +362,6 @@
       <geometry>
         <mesh filename="package://omnihand_pro_description/meshes/collision/middle_pip_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_middle_pip_joint" type="revolute">
@@ -383,7 +375,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/middle_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -395,9 +387,8 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_tip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_dip_col.STL"/>
       </geometry>
-      <material name="red"/>
     </collision>
   </link>
   <joint name="R_middle_dip_joint" type="revolute">
@@ -481,7 +472,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/ring_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -493,7 +484,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_tip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_dip_col.STL"/>
       </geometry>
     </collision>
   </link>
@@ -578,7 +569,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/ring_dip.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/finger_dip.STL"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -590,7 +581,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_tip_col.STL"/>
+        <mesh filename="package://omnihand_pro_description/meshes/collision/finger_dip_col.STL"/>
       </geometry>
     </collision>
   </link>

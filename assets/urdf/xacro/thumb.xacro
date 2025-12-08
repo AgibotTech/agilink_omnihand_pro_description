@@ -115,12 +115,7 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/l_thumb_mcp.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/r_thumb_mcp.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/thumb_mcp.STL" />
                 </geometry>
                 <material name="black" />
             </visual>
@@ -158,12 +153,7 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/l_thumb_pip.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/r_thumb_pip.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/thumb_pip.STL" />
                 </geometry>
                 <material name="black" />
             </visual>
@@ -200,12 +190,7 @@
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/l_thumb_dip.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/r_thumb_dip.STL" />
-                    </xacro:if>
+                    <mesh filename="${mesh_path}/thumb_dip.STL" />
                 </geometry>
                 <material name="black" />
             </visual>
