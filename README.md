@@ -71,11 +71,6 @@ ros2 launch omnihand_pro_description omnihand_pro_description_col.launch.py
 ros2 launch omnihand_pro_description omnihand_pro_description_col.launch.py hand_type:=left
 ```
 
-# OmniHandPro ROS 2 软件包
-
-这是用于 **OmniHandPro** 的 ROS 2 软件包，包含左右手 URDF 模型并支持在
-RViz 中可视化。推荐 ROS 2 版本：**Humble**。
-
 > **关于关节耦合精度的说明**\
 > URDF 仅支持 **线性耦合**，而 OmniHandPro
 > 的大部分被动关节与主动关节之间是 **非线性耦合**。\
