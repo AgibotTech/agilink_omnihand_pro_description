@@ -14,7 +14,13 @@
 
     <xacro:macro name="hand" params="name mirror mirror_mesh *origin">
 
-        <link name="palm">
+        <joint name="${name}_palm_joint" type="fixed">
+            <xacro:insert_block name="origin" />
+            <parent link="base_link" />
+            <child link="${name}_palm" />
+        </joint>
+
+        <link name="${name}_palm">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
 
@@ -63,12 +69,26 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
         </xacro:middle>
 
-        <xacro:ring name="${name}_ring" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
+        <joint name="${name}_ring_mcp_joint" type="revolute">
             <origin xyz="${ring_mcp_x} ${ring_mcp_y*mirror} ${ring_mcp_z}" rpy="0.0 0.0 0.0" />
+            <parent link="${name}_palm" />
+            <child link="${name}_ring_mcp_link" />
+            <axis xyz="0 1 0" />
+            <limit effort="${ring_mcp_torque_max}" velocity="${ring_mcp_velocity_max}"
+                lower="${ring_mcp_position_min}" upper="${ring_mcp_position_max}" />
+        </joint>
+        <xacro:ring name="${name}_ring" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
         </xacro:ring>
 
-        <xacro:ring name="${name}_pinky" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
+        <joint name="${name}_pinky_mcp_joint" type="revolute">
             <origin xyz="${pinky_mcp_x} ${pinky_mcp_y*mirror} ${pinky_mcp_z}" rpy="0.0 0.0 0.0" />
+            <parent link="${name}_palm" />
+            <child link="${name}_pinky_mcp_link" />
+            <axis xyz="0 1 0" />
+            <limit effort="${ring_mcp_torque_max}" velocity="${ring_mcp_velocity_max}"
+                lower="${ring_mcp_position_min}" upper="${ring_mcp_position_max}" />
+        </joint>
+        <xacro:ring name="${name}_pinky" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
         </xacro:ring>
 
     </xacro:macro>

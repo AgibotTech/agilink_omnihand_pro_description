@@ -38,7 +38,7 @@
                 <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}"
                     rpy="${thumb_roll_r} 0 0" />
             </xacro:if>
-            <parent link="palm" />
+            <parent link="${name}_palm" />
             <child link="${name}_thumb_roll_link" />
             <axis xyz="1 0 0" />
 

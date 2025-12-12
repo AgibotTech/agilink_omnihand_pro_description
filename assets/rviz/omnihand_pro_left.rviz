@@ -115,6 +115,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        L_palm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         L_pinky_dip_link:
           Alpha: 1
           Show Axes: false
@@ -186,7 +191,7 @@ Visualization Manager:
           Show Trail: false
           Value: true
         Link Tree Style: Links in Alphabetic Order
-        palm:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -202,7 +207,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: palm
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -281,5 +286,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1421
-  X: 1096
-  Y: 332
+  X: 829
+  Y: 391

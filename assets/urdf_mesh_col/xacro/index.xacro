@@ -26,7 +26,7 @@
 
         <joint name="${name}_index_abad_joint" type="revolute">
             <origin xyz="${index_abad_x} ${index_abad_y*mirror} ${index_abad_z}" rpy="0 0 0" />
-            <parent link="palm" />
+            <parent link="${name}_palm" />
             <child link="${name}_index_abad_link" />
             <axis xyz="1 0 0" />
 

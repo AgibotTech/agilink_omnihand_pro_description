@@ -7,7 +7,20 @@
   <material name="black">
     <color rgba="0.5 0.5 0.5 1.0"/>
   </material>
-  <link name="palm">
+  <link name="base_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="L_palm_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="L_palm"/>
+  </joint>
+  <link name="L_palm">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -50,7 +63,7 @@
   </link>
   <joint name="L_thumb_roll_joint" type="revolute">
     <origin rpy="-1.1169926000000001 0 0" xyz="-0.00148 -0.022278 0.04025"/>
-    <parent link="palm"/>
+    <parent link="L_palm"/>
     <child link="L_thumb_roll_link"/>
     <axis xyz="1 0 0"/>
     <limit effort="0.134" lower="-0.66" upper="0" velocity="2.38"/>
@@ -195,7 +208,7 @@
   </link>
   <joint name="L_index_abad_joint" type="revolute">
     <origin rpy="0 0 0" xyz="-0.0134 -0.030778 0.11936"/>
-    <parent link="palm"/>
+    <parent link="L_palm"/>
     <child link="L_index_abad_link"/>
     <axis xyz="1 0 0"/>
     <limit effort="1.001" lower="-0.26" upper="0.26" velocity="2.16"/>
@@ -312,7 +325,7 @@
   </link>
   <joint name="L_middle_abad_joint" type="revolute">
     <origin rpy="0 0 0" xyz="-0.0134 -0.0066607 0.11936"/>
-    <parent link="palm"/>
+    <parent link="L_palm"/>
     <child link="L_middle_abad_link"/>
     <axis xyz="1 0 0"/>
     <limit effort="1.031" lower="-0.26" upper="0.26" velocity="2.16"/>
@@ -412,6 +425,13 @@
     <parent link="L_middle_dip_link"/>
     <child link="L_middle_tip"/>
   </joint>
+  <joint name="L_ring_mcp_joint" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0001598 0.013518 0.11972"/>
+    <parent link="L_palm"/>
+    <child link="L_ring_mcp_link"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="0.444" lower="0" upper="1.38" velocity="2.54"/>
+  </joint>
   <!-- ring  -->
   <link name="L_ring_mcp_link">
     <visual>
@@ -433,13 +453,6 @@
       </geometry>
     </collision>
   </link>
-  <joint name="L_ring_mcp_joint" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0001598 0.013518 0.11972"/>
-    <parent link="palm"/>
-    <child link="L_ring_mcp_link"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.444" lower="0" upper="1.38" velocity="2.54"/>
-  </joint>
   <link name="L_ring_pip_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -509,6 +522,13 @@
     <parent link="L_ring_dip_link"/>
     <child link="L_ring_tip"/>
   </joint>
+  <joint name="L_pinky_mcp_joint" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0001598 0.033576 0.11272"/>
+    <parent link="L_palm"/>
+    <child link="L_pinky_mcp_link"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="0.444" lower="0" upper="1.38" velocity="2.54"/>
+  </joint>
   <!-- ring  -->
   <link name="L_pinky_mcp_link">
     <visual>
@@ -530,13 +550,6 @@
       </geometry>
     </collision>
   </link>
-  <joint name="L_pinky_mcp_joint" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0001598 0.033576 0.11272"/>
-    <parent link="palm"/>
-    <child link="L_pinky_mcp_link"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.444" lower="0" upper="1.38" velocity="2.54"/>
-  </joint>
   <link name="L_pinky_pip_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>

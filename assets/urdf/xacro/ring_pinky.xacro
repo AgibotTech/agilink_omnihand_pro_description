@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:macro name="ring" params="name mirror mirror_mesh *origin">
+    <xacro:macro name="ring" params="name mirror mirror_mesh">
         <!-- ring  -->
 
         <link name="${name}_mcp_link">
@@ -32,15 +32,6 @@
                 </geometry>
             </collision>
         </link>
-
-        <joint name="${name}_mcp_joint" type="revolute">
-            <xacro:insert_block name="origin" />
-            <parent link="palm" />
-            <child link="${name}_mcp_link" />
-            <axis xyz="0 1 0" />
-            <limit effort="${ring_mcp_torque_max}" velocity="${ring_mcp_velocity_max}"
-                lower="${ring_mcp_position_min}" upper="${ring_mcp_position_max}" />
-        </joint>
 
         <link name="${name}_pip_link">
             <visual>
