@@ -62,11 +62,11 @@
     </inertial>
   </link>
   <joint name="R_thumb_roll_joint" type="revolute">
-    <origin rpy="-2.0246 0 0" xyz="-0.00148 0.022278 0.04025"/>
+    <origin rpy="-1.7628 0 0" xyz="-0.00148 0.022278 0.04025"/>
     <parent link="R_palm"/>
     <child link="R_thumb_roll_link"/>
     <axis xyz="1 0 0"/>
-    <limit effort="0.134" lower="0" upper="0.66" velocity="2.38"/>
+    <limit effort="0.134" lower="0" upper="0.73" velocity="2.38"/>
   </joint>
   <link name="R_thumb_abad_link">
     <visual>
@@ -89,11 +89,11 @@
     </collision>
   </link>
   <joint name="R_thumb_abad_joint" type="revolute">
-    <origin rpy="0 0.95993 0" xyz="0.029071 0 0.0033014"/>
+    <origin rpy="0 1.0996 0" xyz="0.029071 0 0.0033014"/>
     <parent link="R_thumb_roll_link"/>
     <child link="R_thumb_abad_link"/>
     <axis xyz="0 -1 0"/>
-    <limit effort="0.317" lower="-1.22" upper="0" velocity="2.33"/>
+    <limit effort="0.317" lower="-0.94" upper="0" velocity="2.33"/>
   </joint>
   <link name="R_thumb_mcp_link">
     <visual>

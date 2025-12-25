@@ -3,21 +3,21 @@
     <body name="L_palm" pos="0.0 -0.1 0.0">
       <geom class="plastic_visual" mesh="l_palm" />
       <geom class="plastic_collision" mesh="l_palm_col" />
-      <body name="L_thumb_roll_link" pos="-0.00148 -0.022278 0.04025" quat="0.848053 -0.529912 0 0">
+      <body name="L_thumb_roll_link" pos="-0.00148 -0.022278 0.04025" quat="0.77163 -0.636071 0 0">
         <inertial pos="0.0238985 -8.49276e-05 0.00143588"
           quat="0.919383 0.391834 0.0344663 -0.00345847" mass="0.0487219"
           diaginertia="1.16263e-05 6.90975e-06 6.30251e-06" />
-        <joint name="L_thumb_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.66 0"
-          class="hand_joint" />
+        <joint name="L_thumb_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.73 0"
+          class="hand_joint" damping="0.2"/>
         <geom class="plastic_visual" mesh="l_thumb_roll" />
         <geom class="plastic_collision" mesh="l_thumb_roll_col" />
         <body name="L_thumb_abad_link" pos="0.029071 0 -0.0033014"
-          quat="0.461748 1.13949e-08 0.887011 1.13949e-08">
+          quat="0.522517 0 0.852629 0">
           <inertial pos="0.00144112 0.000769716 0.0110531"
             quat="0.966035 0.257709 -0.0179818 0.00620373" mass="0.0052773"
             diaginertia="5.14316e-07 3.63425e-07 2.0324e-07" />
-          <joint name="L_thumb_abad_joint" pos="0 0 0" axis="0 -1 0" range="0 1.22"
-            class="hand_joint" />
+          <joint name="L_thumb_abad_joint" pos="0 0 0" axis="0 -1 0" range="0 0.94"
+            class="hand_joint" damping="0.2"/>
           <geom class="plastic_visual" mesh="l_thumb_abad" />
           <geom class="plastic_collision" mesh="l_thumb_abad_col" />
           <body name="L_thumb_mcp_link" pos="-0.0016774 -0.0068611 0.022935"
@@ -26,7 +26,7 @@
               quat="0.705051 -0.00660592 -0.00791289 0.709082" mass="0.0238745"
               diaginertia="1.13641e-05 9.14323e-06 2.85979e-06" />
             <joint name="L_thumb_mcp_joint" pos="0 0 0" axis="0 -1 0" range="-0.85 0"
-              class="hand_joint" />
+              class="hand_joint" damping="0.2"/>
             <geom class="plastic_visual" mesh="l_thumb_mcp" />
             <geom class="plastic_collision" mesh="l_thumb_mcp_col" />
             <body name="L_thumb_pip_link" pos="0.0067768 0 0.05582">
@@ -34,7 +34,7 @@
                 quat="0.692716 -0.120396 -0.110347 0.702476" mass="0.0150898"
                 diaginertia="1.76945e-06 1.36842e-06 7.81944e-07" />
               <joint name="L_thumb_pip_joint" pos="0 0 0" axis="0 -1 0" range="-1.29 0"
-                class="hand_joint" />
+                class="hand_joint" damping="0.1"/>
               <geom class="plastic_visual" mesh="l_thumb_pip" />
               <geom class="plastic_collision" mesh="l_thumb_pip_col" />
               <body name="L_thumb_dip_link" pos="-0.0025791 0 0.034516">
@@ -45,7 +45,7 @@
                   quat="0.985707 6.06797e-05 0.168466 9.99765e-05" mass="0.0166288"
                   diaginertia="1.64923e-06 1.43183e-06 7.93396e-07" />
                 <joint name="L_thumb_dip_joint" pos="0 0 0" axis="0 -1 0" range="-1.31 0"
-                  class="hand_joint" />
+                  class="hand_joint" damping="0.1"/>
                 <geom class="plastic_visual" mesh="l_thumb_dip" />
                 <geom class="plastic_collision" mesh="thumb_tip" />
                 <body name="L_thumb_tip" pos="-0.01107 0 0.02778">
@@ -60,14 +60,14 @@
         <inertial pos="0.00904689 -2.37542e-06 0.0029644" quat="0.666099 0.665921 -0.237302 0.2378"
           mass="0.00769184" diaginertia="3.4067e-07 2.69715e-07 1.96446e-07" />
         <joint name="L_index_abad_joint" pos="0 0 0" axis="1 0 0" limited="false" range="-0.26 0.26"
-          class="hand_joint" />
+          class="hand_joint" damping="0.2"/>
         <geom class="plastic_visual" mesh="index_abad" />
         <body name="L_index_mcp_link" pos="0.01357 0 0">
           <inertial pos="-0.00199826 -2.64457e-05 0.0201667"
             quat="0.707573 0.0239679 0.0245347 0.705807" mass="0.00942127"
             diaginertia="1.34371e-06 1.23388e-06 3.57177e-07" />
           <joint name="L_index_mcp_joint" pos="0 0 0" axis="0 1 0" range="0 1.33"
-            class="hand_joint" />
+            class="hand_joint" damping="0.2"/>
           <geom class="plastic_visual" mesh="index_mcp" />
           <geom class="plastic_collision" mesh="index_mcp_col" />
           <body name="L_index_pip_link" pos="-0.0044047 0 0.039781">
@@ -75,7 +75,7 @@
               quat="0.995585 0.000389063 -0.0938568 -0.00092998" mass="0.00438957"
               diaginertia="3.96035e-07 3.39842e-07 2.28756e-07" />
             <joint name="L_index_pip_joint" pos="0 0 0" axis="0 1 0" range="0 1.48"
-              class="hand_joint" />
+              class="hand_joint" damping="0.15"/>
             <geom class="plastic_visual" mesh="index_pip" />
             <geom class="plastic_collision" mesh="index_pip_col" />
             <body name="L_index_dip_link" pos="0.0058514 0 0.026478">
@@ -83,7 +83,7 @@
                 quat="0.982693 0.000634148 0.184712 0.013961" mass="0.00919994"
                 diaginertia="6.74101e-07 6.3367e-07 2.43684e-07" />
               <joint name="L_index_dip_joint" pos="0 0 0" axis="0 1 0" range="0 1.31"
-                class="hand_joint" />
+                class="hand_joint" damping="0.15"/>
               <site name="L_index_tactile_sit" pos="-0.006 0 0.015" quat="0 -0.3826834 0 0.9238795"
                 type="box"
                 size="0.004 0.008 0.012" group="3" />
@@ -100,14 +100,14 @@
         <inertial pos="0.00886137 -3.75661e-09 0.00266833" quat="0.6281 0.628111 -0.324772 0.324791"
           mass="0.00637103" diaginertia="2.76199e-07 2.24278e-07 1.58576e-07" />
         <joint name="L_middle_abad_joint" pos="0 0 0" axis="1 0 0" limited="false"
-          range="-0.26 0.26" class="hand_joint" />
+          range="-0.26 0.26" class="hand_joint" damping="0.2"/>
         <geom class="plastic_visual" mesh="middle_abad" />
         <body name="L_middle_mcp_link" pos="0.01337 0 0">
           <inertial pos="-0.00165477 -2.2098e-06 0.0225332"
             quat="0.707674 0.0155587 0.016237 0.706181" mass="0.0105446"
             diaginertia="1.85662e-06 1.73308e-06 4.18706e-07" />
           <joint name="L_middle_mcp_joint" pos="0 0 0" axis="0 1 0" range="0 1.33"
-            class="hand_joint" />
+            class="hand_joint" damping="0.2"/>
           <geom class="plastic_visual" mesh="middle_mcp" />
           <geom class="plastic_collision" mesh="middle_mcp_col" />
           <body name="L_middle_pip_link" pos="-0.0040396 0 0.044837">
@@ -115,7 +115,7 @@
               quat="0.997281 -0.000178032 -0.0736915 0.000416892" mass="0.00495729"
               diaginertia="5.54887e-07 4.9146e-07 2.56507e-07" />
             <joint name="L_middle_pip_joint" pos="0 0 0" axis="0 1 0" range="0 1.71"
-              class="hand_joint" />
+              class="hand_joint" damping="0.15"/>
             <geom class="plastic_visual" mesh="middle_pip" />
             <geom class="plastic_collision" mesh="middle_pip_col" />
             <body name="L_middle_dip_link" pos="0.005529 0 0.031336">
@@ -126,7 +126,7 @@
                 quat="0.983293 0.000520157 0.181518 0.0136466" mass="0.00919992"
                 diaginertia="6.74098e-07 6.33664e-07 2.43677e-07" />
               <joint name="L_middle_dip_joint" pos="0 0 0" axis="0 1 0" range="0 1.31"
-                class="hand_joint" />
+                class="hand_joint" damping="0.15"/>
               <geom class="plastic_visual" mesh="middle_dip" />
               <geom class="plastic_collision" mesh="finger_tip" />
               <body name="L_middle_tip" pos="-0.01465 0 0.02533">
@@ -141,7 +141,7 @@
           quat="0.999359 -9.53848e-05 -0.0333935 0.0128948" mass="0.00477953"
           diaginertia="5.45577e-07 5.41638e-07 1.7485e-07" />
         <joint name="L_ring_mcp_joint" pos="0 0 0" axis="0 1 0" range="0 1.38"
-          class="hand_joint" />
+          class="hand_joint" damping="0.15"/>
         <geom class="plastic_visual" mesh="ring_mcp" />
         <geom class="plastic_collision" mesh="ring_mcp_col" />
         <body name="L_ring_pip_link" pos="-0.0039371 0 0.03983">
@@ -149,7 +149,7 @@
             quat="0.999942 0.000103876 -0.0107411 -3.34326e-05" mass="0.00477953"
             diaginertia="2.25818e-07 1.61876e-07 1.1765e-07" />
           <joint name="L_ring_pip_joint" pos="0 0 0" axis="0 1 0" range="0 1.57"
-            class="hand_joint" />
+            class="hand_joint" damping="0.15"/>
           <geom class="plastic_visual" mesh="ring_pip" />
           <geom class="plastic_collision" mesh="ring_pip_col" />
           <body name="L_ring_dip_link" pos="0.006162 0 0.026407">
@@ -160,7 +160,7 @@
               quat="0.983766 0.000439343 0.178945 0.0135322" mass="0.00919994"
               diaginertia="6.74102e-07 6.33662e-07 2.43671e-07" />
             <joint name="L_ring_dip_joint" pos="0 0 0" axis="0 1 0" range="0 1.31"
-              class="hand_joint" />
+              class="hand_joint" damping="0.15"/>
             <geom class="plastic_visual" mesh="ring_dip" />
             <geom class="plastic_collision" mesh="finger_tip" />
             <body name="L_ring_tip" pos="-0.01465 0 0.02533">
@@ -174,7 +174,7 @@
           quat="0.999359 -9.53848e-05 -0.0333935 0.0128948" mass="0.00477953"
           diaginertia="5.45577e-07 5.41638e-07 1.7485e-07" />
         <joint name="L_pinky_mcp_joint" pos="0 0 0" axis="0 1 0" range="0 1.38"
-          class="hand_joint" />
+          class="hand_joint" damping="0.15"/>
         <geom class="plastic_visual" mesh="ring_mcp" />
         <geom class="plastic_collision" mesh="ring_mcp_col" />
         <body name="L_pinky_pip_link" pos="-0.0039371 0 0.03983">
@@ -182,7 +182,7 @@
             quat="0.999942 0.000103876 -0.0107411 -3.34326e-05" mass="0.00477953"
             diaginertia="2.25818e-07 1.61876e-07 1.1765e-07" />
           <joint name="L_pinky_pip_joint" pos="0 0 0" axis="0 1 0" range="0 1.57"
-            class="hand_joint" />
+            class="hand_joint" damping="0.15"/>
           <geom class="plastic_visual" mesh="ring_pip" />
           <geom class="plastic_collision" mesh="ring_pip_col" />
           <body name="L_pinky_dip_link" pos="0.006162 0 0.026407">
@@ -193,7 +193,7 @@
               quat="0.983766 0.000439343 0.178945 0.0135322" mass="0.00919994"
               diaginertia="6.74102e-07 6.33662e-07 2.43671e-07" />
             <joint name="L_pinky_dip_joint" pos="0 0 0" axis="0 1 0" range="0 1.31"
-              class="hand_joint" />
+              class="hand_joint" damping="0.15"/>
             <geom class="plastic_visual" mesh="ring_dip" />
             <geom class="plastic_collision" mesh="finger_tip" />
             <body name="L_pinky_tip" pos="-0.01465 0 0.02533">
@@ -241,14 +241,10 @@
 
   <actuator>
     <!-- Thumb -->
-    <!-- <position name="L_thumb_roll_actuator" joint="L_thumb_roll_joint"
-      ctrlrange="-0.66 0" forcerange="-0.134 0.134" kp="100" /> -->
     <position name="L_thumb_roll_actuator" joint="L_thumb_roll_joint"
-      ctrlrange="-0.66 0" forcerange="-0.5 0.5" kp="100" />
-    <!-- <position name="L_thumb_abad_actuator" joint="L_thumb_abad_joint" ctrlrange="0 1.22"
-      forcerange="-0.317 0.317" kp="100" /> -->
-    <position name="L_thumb_abad_actuator" joint="L_thumb_abad_joint" ctrlrange="0 1.22"
-      forcerange="-0.5 0.5" kp="100" />
+      ctrlrange="-0.73 0" forcerange="-0.134 0.134" kp="100" />
+    <position name="L_thumb_abad_actuator" joint="L_thumb_abad_joint" ctrlrange="0 0.94"
+      forcerange="-0.317 0.317" kp="100" />
     <position name="L_thumb_mcp_actuator" joint="L_thumb_mcp_joint" ctrlrange="-0.85 0"
       forcerange="-0.8 0.8" kp="100" />
     <position name="L_thumb_pip_actuator" joint="L_thumb_pip_joint" ctrlrange="-1.29 0"
@@ -259,32 +255,25 @@
       forcerange="-1.0 1.0" kp="100" />
     <position name="L_index_mcp_actuator" joint="L_index_mcp_joint" ctrlrange="0 1.33"
       forcerange="-0.42 0.42" kp="100" />
-    <!-- <position name="L_index_pip_actuator" joint="L_index_pip_joint" ctrlrange="0 1.48"
-      forcerange="-0.216 0.216" kp="100" /> -->
     <position name="L_index_pip_actuator" joint="L_index_pip_joint" ctrlrange="0 1.48"
-      forcerange="-0.5 0.5" kp="100" />
+      forcerange="-0.216 0.216" kp="150" />
 
     <!-- Middle -->
     <position name="L_middle_abad_actuator" joint="L_middle_abad_joint" ctrlrange="-0.26 0.26"
       forcerange="-1.0 1.0" kp="100" />
     <position name="L_middle_mcp_actuator" joint="L_middle_mcp_joint" ctrlrange="0 1.33"
       forcerange="-0.413 0.413" kp="100" />
-    <!-- <position name="L_middle_pip_actuator" joint="L_middle_pip_joint" ctrlrange="0 1.71"
-      forcerange="-0.136 0.136" kp="100" /> -->
     <position name="L_middle_pip_actuator" joint="L_middle_pip_joint" ctrlrange="0 1.71"
-      forcerange="-0.5 0.5" kp="100" />
+      forcerange="-0.136 0.136" kp="150" />
 
     <!-- Ring -->
-    <!-- <position name="L_ring_mcp_actuator" joint="L_ring_mcp_joint" ctrlrange="0 1.38"
-      forcerange="-0.444 0.444" kp="150" /> -->
     <position name="L_ring_mcp_actuator" joint="L_ring_mcp_joint" ctrlrange="0 1.38"
-      forcerange="-1 1" kp="150" />
+      forcerange="-0.444 0.444" kp="150" />
 
     <!-- Pinky -->
-    <!-- <position name="L_pinky_mcp_actuator" joint="L_pinky_mcp_joint" ctrlrange="0 1.38"
-      forcerange="-0.444 0.444" kp="150" /> -->
     <position name="L_pinky_mcp_actuator" joint="L_pinky_mcp_joint" ctrlrange="0 1.38"
-      forcerange="-1 1" kp="150" />
+      forcerange="-0.444 0.444" kp="150" />
+
   </actuator>
 
   <equality>

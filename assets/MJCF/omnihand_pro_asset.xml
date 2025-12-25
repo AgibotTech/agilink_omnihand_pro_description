@@ -48,7 +48,7 @@
     </asset>
     <default>
         <default class="hand_joint">
-            <joint type="hinge" limited="true" damping="0.5" armature="0.01" margin="0.01"
+            <joint type="hinge" limited="true"  armature="0.01" margin="0.1"
                 frictionloss="0.001" />
         </default>
         <default class="plastic_visual">
