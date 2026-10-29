@@ -3,13 +3,13 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/const.xacro" />
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/material.xacro" />
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/thumb.xacro" />
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/index.xacro" />
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/middle.xacro" />
-    <xacro:include filename="$(find omnihand_pro_description)/urdf_mesh_col/xacro/ring_pinky.xacro" />
-    <xacro:property name="mesh_path" value="package://omnihand_pro_description/meshes" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/const.xacro" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/material.xacro" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/thumb.xacro" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/index.xacro" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/middle.xacro" />
+    <xacro:include filename="$(find omnihand_pro_2025_description)/urdf/xacro/ring_pinky.xacro" />
+    <xacro:property name="mesh_path" value="package://omnihand_pro_2025_description/meshes" />
 
 
     <xacro:macro name="hand" params="name mirror mirror_mesh *origin">
@@ -45,16 +45,20 @@
                     izz="${palm_izz}" />
             </inertial>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 0" />
+                <origin rpy="0 0 0" xyz="0 0 ${palm_collision_cylinder_z}" />
                 <geometry>
-                    <xacro:if value="${mirror_mesh == True}">
-                        <mesh filename="${mesh_path}/collision/l_palm_col.STL" />
-                    </xacro:if>
-                    <xacro:if value="${mirror_mesh == False}">
-                        <mesh filename="${mesh_path}/collision/r_palm_col.STL" />
-                    </xacro:if>
+                    <cylinder radius="${palm_collision_cylinder_r}"
+                        length="${palm_collision_cylinder_l}" />
                 </geometry>
             </collision>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 ${palm_collision_box_z}" />
+                <geometry>
+                    <box
+                        size="${palm_collision_box_l} ${palm_collision_box_w} ${palm_collision_box_h}" />
+                </geometry>
+            </collision>
+
         </link>
 
         <xacro:thumb name="${name}" mirror="${mirror}" mirror_mesh="${mirror_mesh}">
