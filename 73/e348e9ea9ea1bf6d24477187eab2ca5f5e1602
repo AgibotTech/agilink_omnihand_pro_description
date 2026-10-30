@@ -1,0 +1,305 @@
+urdf_mesh_col/omnihand_pro_left.urdf
+  s_9659097d9fceb8::t_92833a7af31078 27,39,48,55,75,87,102,114,129,141,156,168,199,220,232,247,259,274,286,316,337,349,364,376,391,403,440,452,460,472,488,500,537,549,557,569,585,597
+urdf_mesh_col/omnihand_pro_right.urdf
+  s_9659097d9fceb8::t_92833a7af31078 27,39,48,55,75,87,102,114,129,141,156,168,199,220,232,247,259,274,286,316,337,349,364,376,391,403,440,452,460,472,488,500,537,549,557,569,585,597
+CMakeLists.txt
+  s_9659097d9fceb8::t_72670b4c0713ed 2,28-37,39
+  s_9659097d9fceb8::t_c2d2a136150fb1 38
+urdf_mesh_col/xacro/omnihand_pro_left.xacro
+  s_9659097d9fceb8::t_92833a7af31078 5,20
+package.xml
+  s_9659097d9fceb8::t_72670b4c0713ed 4,6,8,12-19
+urdf/xacro/omnihand_pro_right.xacro
+  s_9659097d9fceb8::t_92833a7af31078 5,20
+README_CN.md
+  s_9659097d9fceb8::t_1159018748e8d6 105,116-118,125,127
+  s_9659097d9fceb8::t_c2d2a136150fb1 1-104,106-115,119-124,126,128-131
+urdf/xacro/hand.xacro
+  s_9659097d9fceb8::t_92833a7af31078 6-12,99
+urdf_mesh_col/xacro/omnihand_pro_right.xacro
+  s_9659097d9fceb8::t_92833a7af31078 5,20
+urdf_mesh_col/xacro/hand.xacro
+  s_9659097d9fceb8::t_92833a7af31078 6-12,95
+urdf/omnihand_pro_left.urdf
+  s_9659097d9fceb8::t_92833a7af31078 27,54,75,102,129,156,199,220,247,274,316,337,364,391,440,460,488,537,557,585
+urdf/xacro/omnihand_pro_left.xacro
+  s_9659097d9fceb8::t_92833a7af31078 5,20
+launch/omnihand_pro_description.launch.py
+  s_9659097d9fceb8::t_92833a7af31078 13,16,24-25,68
+launch/omnihand_pro_description_col.launch.py
+  s_9659097d9fceb8::t_92833a7af31078 13,16,24-25,68
+README.md
+  s_9659097d9fceb8::t_72670b4c0713ed 9-12,19-20,23,25,32,40,56-58,65,70,78,82,87,111,115,120,133
+  s_9659097d9fceb8::t_c2d2a136150fb1 1,3,5,7,13-18,21-22,24,26-27,36-37,44-45,51,53,61,63,68,73-75,77,80,85,90-96,98-99,103,106,108,114,119,121,123,125,128-129,131
+  s_9659097d9fceb8::t_1159018748e8d6 97,105,116-118,127
+urdf/omnihand_pro_right.urdf
+  s_9659097d9fceb8::t_92833a7af31078 27,54,75,102,129,156,199,220,247,274,316,337,364,391,440,460,488,537,557,585
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "73e348e9ea9ea1bf6d24477187eab2ca5f5e1602",
+  "prompts": {},
+  "sessions": {
+    "s_9659097d9fceb8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17b33-5f14-7a33-b176-41722cb43bab",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": null,
+      "custom_attributes": {
+        "tlab.token_usage.input_tokens": "5648148",
+        "tlab.token_usage.cache_read_tokens": "172380693",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.session_started_at": "2026-10-30T00:20:26Z",
+        "tlab.token_usage.output_tokens": "983848"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "README_CN.md",
+      "additions": {
+        "human": 131
+      }
+    },
+    {
+      "old_path": "CMakeLists.txt",
+      "new_path": "CMakeLists.txt",
+      "additions": {
+        "human": 13
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "human": 78
+      },
+      "deletions": {
+        "human": 4,
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 51
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README_EN.md",
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 111
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/omnihand_pro_left.urdf",
+      "new_path": "urdf/omnihand_pro_left.urdf",
+      "additions": {
+        "human": 20
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 20
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/omnihand_pro_right.urdf",
+      "new_path": "urdf/omnihand_pro_right.urdf",
+      "additions": {
+        "human": 20
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 20
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/hand.xacro",
+      "new_path": "urdf/xacro/hand.xacro",
+      "additions": {
+        "human": 8
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 8
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/omnihand_pro_left.xacro",
+      "new_path": "urdf/xacro/omnihand_pro_left.xacro",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/omnihand_pro_right.xacro",
+      "new_path": "urdf/xacro/omnihand_pro_right.xacro",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/omnihand_pro_left.urdf",
+      "new_path": "urdf_mesh_col/omnihand_pro_left.urdf",
+      "additions": {
+        "human": 38
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 38
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/omnihand_pro_right.urdf",
+      "new_path": "urdf_mesh_col/omnihand_pro_right.urdf",
+      "additions": {
+        "human": 38
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 38
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/hand.xacro",
+      "new_path": "urdf_mesh_col/xacro/hand.xacro",
+      "additions": {
+        "human": 8
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 8
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/omnihand_pro_left.xacro",
+      "new_path": "urdf_mesh_col/xacro/omnihand_pro_left.xacro",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/omnihand_pro_right.xacro",
+      "new_path": "urdf_mesh_col/xacro/omnihand_pro_right.xacro",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "launch/omnihand_pro_description.launch.py",
+      "new_path": "launch/omnihand_pro_description.launch.py",
+      "additions": {
+        "human": 5
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "launch/omnihand_pro_description_col.launch.py",
+      "new_path": "launch/omnihand_pro_description_col.launch.py",
+      "additions": {
+        "human": 5
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "package.xml",
+      "new_path": "package.xml",
+      "additions": {
+        "human": 11
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_9659097d9fceb8",
+            "lines": 3
+          }
+        ]
+      }
+    }
+  ]
+}
